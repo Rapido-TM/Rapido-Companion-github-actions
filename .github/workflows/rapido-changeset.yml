@@ -1,0 +1,87 @@
+name: "Rapido Changeset"
+
+on:
+  workflow_dispatch:
+    inputs:
+      data:
+        description: "Table data, to produce contents of package.xml"
+        required: true
+      branch:
+        description: "Branch on which to work"
+        default: "main"
+      commit_message:
+        description: "Commit message added when committing the package.xml"
+        default: "Created by Rapido Companion"
+      sfdx-docker-image:
+        description: "Salesforce DX CLI version, for using the CLI docker image (ex: salesforce/salesforcedx:7.190.2-slim)"
+        default: "salesforce/salesforcedx:7.190.2-slim"
+      path_package_xml:
+        description: "Path to the package.xml file"
+        required: true
+      path_package_xml_pre:
+        description: "Path to the package.xml file for destructive changes pre deploy"
+      path_package_xml_post:
+        description: "Path to the package.xml file for destructive changes post deploy"
+
+jobs:
+  #########################################################################
+  # Retrieve package from Salesforce (source org)
+  # commit to Github,
+  # deploy to Salesforce (target org)
+  #
+
+  rapido_changeset:
+    runs-on: ubuntu-latest
+    container: ${{ inputs.sfdx-docker-image }}
+    name: "Changeset : generate package.xml manifests, retrieve, commit, deploy"
+    env:
+      folder-to-commit: .
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Generate package.xml
+        uses: RupertBarrow/actions/action-create-sfdx-package-xml@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
+        with:
+          contents: ${{ github.event.inputs.data }}
+          path: "${{ github.event.inputs.path_package_xml }}"
+
+      - name: Retrieve metadata from Salesforce (source org)
+        uses: RupertBarrow/actions/action-command@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
+        with:
+          # flowbird-devrupert
+          salesforce_sfdx_auth_url: force://PlatformCLI::5Aep861lc_wYYUnDahaR07WulnQvelyp70o5GkUYia1X6qv4DqADolu7cEkxxWRplX9l8r8i3XLsqpFsidV_X0Y@flowbird--devrupert.sandbox.my.salesforce.com
+          command: "sfdx force:source:retrieve -x ${{ github.event.inputs.path_package_xml }}"
+
+      - name: Commit to Github
+        uses: RupertBarrow/actions/action-commit@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
+        with:
+          commit_message: ${{ github.event.inputs.commit_message }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Command options for deploy
+        id: deployOptions
+        uses: actions/github-script@v6
+        with:
+          result-encoding: string
+          script: |
+            let options = "-x '${{ github.event.inputs.path_package_xml }}'"
+            if ( "this${{ github.event.inputs.path_package_xml_pre }}" !== "this" ) {
+              options += " --predestructivechanges='${{ github.event.inputs.path_package_xml_pre }}'"
+            }
+            if ( "this${{ github.event.inputs.path_package_xml_post }}" !== "this" ) {
+              options += " --postdestructivechanges='${{ github.event.inputs.path_package_xml_post }}'"
+            }
+            return options
+
+      - name: Deploy metadata to Salesforce (target org)
+        uses: RupertBarrow/actions/action-command@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
+        with:
+          # flowbird-devrupert
+          salesforce_sfdx_auth_url: force://PlatformCLI::5Aep861lc_wYYUnDahaR07WulnQvelyp70o5GkUYia1X6qv4DqADolu7cEkxxWRplX9l8r8i3XLsqpFsidV_X0Y@flowbird--devrupert.sandbox.my.salesforce.com
+          command: "sfdx force:source:deploy ${{ steps.deployOptions.outputs.result }}"
