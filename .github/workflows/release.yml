@@ -1,0 +1,23 @@
+name: Release
+# Create tag and release on branches alpha and release.
+# This also publishes the extension to the Chrome Web Store.
+
+on:
+  push:
+    branches: [release, beta, alpha]
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.16
+          cache: "npm"
+      #- run: npm install
+      #- run: npm run build --if-present
+      - run: npx semantic-release
