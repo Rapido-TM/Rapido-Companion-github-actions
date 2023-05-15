@@ -1,0 +1,34 @@
+{
+  "branches": [
+    { "name": "release" },
+    {
+      "name": "alpha",
+      "channel": "alpha",
+      "prerelease": true
+    },
+    {
+      "name": "beta",
+      "channel": "beta",
+      "prerelease": true
+    }
+  ],
+  "debug": true,
+  "ci": true,
+  "dryRun": false,
+  "repositoryUrl": "https://github.com/RapidoCloud/rapido-companion-github-actions",
+  "distFolder": "github-workflows",
+  "target": "trustedTesters",
+
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          "rapido-companion-github-actions_v${lastRelease.version}_${branch.name}.zip"
+        ]
+      }
+    ]
+  ]
+}
