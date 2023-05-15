@@ -1,0 +1,24 @@
+{
+  "name": "@rapidocloud/rapido-companion-github-actions",
+  "description": "by Rapido Cloud @ Rapido.org",
+  "author": "Rupert Barrow @ Rapido.org",
+  "license": "MIT",
+  "repository": "https://github.com/RapidoCloud/rapido-companion-github-actions",
+  "homepage": "https://github.com/RapidoCloud/rapido-companion-github-actions",
+  "bugs": "https://github.com/RapidoCloud/rapido-companion-github-actions/issues",
+  "keywords": [
+    "salesforce",
+    "devops",
+    "github",
+    "github actions"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=18.16.0",
+    "npm": ">=6.4.1"
+  },
+  "devDependencies": {
+    "semantic-release": "^21.0.1",
+    "semantic-release-chrome": "^3.2.0"
+  }
+}
