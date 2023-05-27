@@ -18,10 +18,12 @@ on:
       path_package_xml:
         description: "Path to the package.xml file"
         required: true
-      path_package_xml_pre:
+      path_package_xml_destructive_pre:
         description: "Path to the package.xml file for destructive changes pre deploy"
-      path_package_xml_post:
+      path_package_xml_destructive_post:
         description: "Path to the package.xml file for destructive changes post deploy"
+      salesforce_sfdx_auth_url:
+        description: "Salesforce DX auth url"
 
 jobs:
   #########################################################################
@@ -54,8 +56,7 @@ jobs:
       - name: Retrieve metadata from Salesforce (source org)
         uses: RupertBarrow/actions/action-command@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
         with:
-          # flowbird-devrupert
-          salesforce_sfdx_auth_url: force://PlatformCLI::5Aep861lc_wYYUnDahaR07WulnQvelyp70o5GkUYia1X6qv4DqADolu7cEkxxWRplX9l8r8i3XLsqpFsidV_X0Y@flowbird--devrupert.sandbox.my.salesforce.com
+          salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           command: "sfdx force:source:retrieve -x ${{ github.event.inputs.path_package_xml }}"
 
       - name: Commit to Github
@@ -72,16 +73,15 @@ jobs:
           script: |
             let options = "-x '${{ github.event.inputs.path_package_xml }}'"
             if ( "this${{ github.event.inputs.path_package_xml_pre }}" !== "this" ) {
-              options += " --predestructivechanges='${{ github.event.inputs.path_package_xml_pre }}'"
+              options += " --predestructivechanges='${{ github.event.inputs.path_package_xml_destructive_pre }}'"
             }
             if ( "this${{ github.event.inputs.path_package_xml_post }}" !== "this" ) {
-              options += " --postdestructivechanges='${{ github.event.inputs.path_package_xml_post }}'"
+              options += " --postdestructivechanges='${{ github.event.inputs.path_package_xml_destructive_post }}'"
             }
             return options
 
       - name: Deploy metadata to Salesforce (target org)
         uses: RupertBarrow/actions/action-command@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
         with:
-          # flowbird-devrupert
-          salesforce_sfdx_auth_url: force://PlatformCLI::5Aep861lc_wYYUnDahaR07WulnQvelyp70o5GkUYia1X6qv4DqADolu7cEkxxWRplX9l8r8i3XLsqpFsidV_X0Y@flowbird--devrupert.sandbox.my.salesforce.com
+          salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           command: "sfdx force:source:deploy ${{ steps.deployOptions.outputs.result }}"
