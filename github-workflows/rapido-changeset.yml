@@ -14,7 +14,7 @@ on:
         default: "Created by Rapido Companion"
       sfdx-docker-image:
         description: "Salesforce DX CLI version, for using the CLI docker image (ex: salesforce/salesforcedx:7.190.2-slim)"
-        default: "salesforce/salesforcedx:7.190.2-slim"
+        default: "salesforce/salesforcedx:7.207.5-slim"
       path_package_xml:
         description: "Path to the package.xml file"
         required: true
@@ -48,19 +48,19 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
 
       - name: Generate package.xml
-        uses: RupertBarrow/actions/action-create-sfdx-package-xml@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
+        uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ github.event.inputs.data }}
           path: "${{ github.event.inputs.path_package_xml }}"
 
       - name: Retrieve metadata from Salesforce (source org)
-        uses: RupertBarrow/actions/action-command@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
+        uses: RupertBarrow/actions/action-command@v3
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           command: "sfdx force:source:retrieve -x ${{ github.event.inputs.path_package_xml }}"
 
       - name: Commit to Github
-        uses: RupertBarrow/actions/action-commit@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
+        uses: RupertBarrow/actions/action-commit@v3
         with:
           commit_message: ${{ github.event.inputs.commit_message }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -81,7 +81,7 @@ jobs:
             return options
 
       - name: Deploy metadata to Salesforce (target org)
-        uses: RupertBarrow/actions/action-command@feature/33-create-new-action-prd-package-retrieve-deploy-to-replace-and-enhance-populate-repo-from-salesforce-org
+        uses: RupertBarrow/actions/action-command@v3
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           command: "sfdx force:source:deploy ${{ steps.deployOptions.outputs.result }}"
