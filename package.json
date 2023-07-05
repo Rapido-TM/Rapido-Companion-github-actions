@@ -1,6 +1,6 @@
 {
   "name": "@rapidocloud/rapido-companion-github-actions",
-  "description": "by Rapido Cloud @ Rapido.org",
+  "description": "Github Actions used by Rapido Companion for DevOps",
   "author": "Rupert Barrow @ Rapido.org",
   "license": "MIT",
   "repository": "https://github.com/RapidoCloud/rapido-companion-github-actions",
