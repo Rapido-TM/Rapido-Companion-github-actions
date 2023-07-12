@@ -1,11 +1,11 @@
 {
-  "name": "@rapidocloud/rapido-companion-github-actions",
+  "name": "@rapido-tm/rapido-companion-github-actions",
   "description": "Github Actions used by Rapido Companion for DevOps",
   "author": "Rupert Barrow @ Rapido.org",
   "license": "MIT",
-  "repository": "https://github.com/RapidoCloud/rapido-companion-github-actions",
-  "homepage": "https://github.com/RapidoCloud/rapido-companion-github-actions",
-  "bugs": "https://github.com/RapidoCloud/rapido-companion-github-actions/issues",
+  "repository": "https://github.com/Rapido-TM/rapido-companion-github-actions",
+  "homepage": "https://github.com/Rapido-TM/rapido-companion-github-actions",
+  "bugs": "https://github.com/Rapido-TM/rapido-companion-github-actions/issues",
   "keywords": [
     "salesforce",
     "devops",
