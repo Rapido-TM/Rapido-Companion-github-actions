@@ -15,7 +15,7 @@
   "debug": true,
   "ci": true,
   "dryRun": false,
-  "repositoryUrl": "https://github.com/RapidoCloud/rapido-companion-github-actions",
+  "repositoryUrl": "https://github.com/Rapido-TM/rapido-companion-github-actions",
   "distFolder": "github-workflows",
   "target": "trustedTesters",
 
