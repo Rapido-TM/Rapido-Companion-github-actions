@@ -8,10 +8,8 @@ on:
         required: true
       destructivePreData:
         description: "Table data, to produce contents of package.xml for pre-destrictive changes"
-        required: true
       destructivePostData:
         description: "Table data, to produce contents of package.xml for post-destrictive changes"
-        required: true
       branch:
         description: "Branch on which to work"
         default: "main"
