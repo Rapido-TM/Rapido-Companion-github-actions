@@ -6,13 +6,6 @@ on:
       data:
         description: "Table data, to produce contents of package.xml as well as pre- and post-destructive changes"
         required: true
-      #packageData:
-      #  description: "Table data, to produce contents of package.xml"
-      #  required: true
-      #destructivePreData:
-      #  description: "Table data, to produce contents of package.xml for pre-destrictive changes"
-      #destructivePostData:
-      #  description: "Table data, to produce contents of package.xml for post-destrictive changes"
       branch:
         description: "Branch on which to work"
         default: "main"
@@ -61,21 +54,21 @@ jobs:
 
       - name: Generate package.xml
         if: "${{ github.event.inputs.data.packageData }}"
-        uses: RupertBarrow/actions/action-create-sfdx-package-xml@feature/53-debug-issue-with-action-create-sfdx-package-xml
+        uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ github.event.inputs.data.packageData }}
           path: "${{ github.event.inputs.path_package_xml }}"
 
       - name: Generate package.xml for destructive-changes-pre
         if: "${{ github.event.inputs.data.destructivePreData }}"
-        uses: RupertBarrow/actions/action-create-sfdx-package-xml@feature/53-debug-issue-with-action-create-sfdx-package-xml
+        uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ github.event.inputs.data.destructivePreData }}
           path: "${{ github.event.inputs.path_package_xml_destructive_pre }}"
 
       - name: Generate package.xml for destructive-changes-post
         if: "${{ github.event.inputs.data.destructivePostData }}"
-        uses: RupertBarrow/actions/action-create-sfdx-package-xml@feature/53-debug-issue-with-action-create-sfdx-package-xml
+        uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ github.event.inputs.data.destructivePostData }}
           path: "${{ github.event.inputs.path_package_xml_destructive_post }}"
