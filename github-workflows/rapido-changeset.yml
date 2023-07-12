@@ -3,8 +3,14 @@ name: "Rapido Changeset"
 on:
   workflow_dispatch:
     inputs:
-      data:
+      packageData:
         description: "Table data, to produce contents of package.xml"
+        required: true
+      destructivePreData:
+        description: "Table data, to produce contents of package.xml for pre-destrictive changes"
+        required: true
+      destructivePostData:
+        description: "Table data, to produce contents of package.xml for post-destrictive changes"
         required: true
       branch:
         description: "Branch on which to work"
@@ -48,10 +54,24 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
 
       - name: Generate package.xml
-        uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
+        uses: RupertBarrow/actions/action-create-sfdx-package-xml@feature/53-debug-issue-with-action-create-sfdx-package-xml
         with:
-          contents: ${{ github.event.inputs.data }}
+          contents: ${{ github.event.inputs.packageData }}
           path: "${{ github.event.inputs.path_package_xml }}"
+
+      - name: Generate package.xml for destructive-changes-pre
+        if: "${{ github.event.inputs.destructivePreData }}" != ""
+        uses: RupertBarrow/actions/action-create-sfdx-package-xml@feature/53-debug-issue-with-action-create-sfdx-package-xml
+        with:
+          contents: ${{ github.event.inputs.destructivePreData }}
+          path: "${{ github.event.inputs.path_package_xml_destructive_pre }}"
+
+      - name: Generate package.xml for destructive-changes-post
+        if: "${{ github.event.inputs.destructivePostData }}" != ""
+        uses: RupertBarrow/actions/action-create-sfdx-package-xml@feature/53-debug-issue-with-action-create-sfdx-package-xml
+        with:
+          contents: ${{ github.event.inputs.destructivePostData }}
+          path: "${{ github.event.inputs.path_package_xml_destructive_post }}"
 
       - name: Retrieve metadata from Salesforce (source org)
         uses: RupertBarrow/actions/action-command@v3
