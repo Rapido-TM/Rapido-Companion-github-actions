@@ -1,4 +1,4 @@
-name: "Rapido Changeset"
+name: "Rapido Changeset List"
 
 on:
   workflow_dispatch:
@@ -6,28 +6,29 @@ on:
       salesforce_sfdx_auth_url:
         description: "Salesforce DX auth url for the sandbox org"
         required: true
+      salesforce_instance_url:
+        description: "Salesforce instance url where to look for changesets"
+        required: true
     outputs:
       changeset_list:
-        description: "JSON list of changesets, with id, nam, isIncoming, isOutgoing"
+        description: "JSON list of changesets, with id, name, isIncoming, isOutgoing"
         value: ${{ jobs.changeset_list.outputs.changeset_list }}
 
 jobs:
   #########################################################################
-  # Retrieve package from Salesforce (source org)
-  # commit to Github,
-  # deploy to Salesforce (target org)
+  # Get list of changesets from Salesforce
   #
 
   rapido_changeset_list:
     runs-on: ubuntu-latest
     container: ${{ inputs.sfdx-docker-image }}
     name: "List changesets"
-    env:
-      folder-to-commit: .
-    permissions:
-      contents: write
-    outputs:
-      changeset_list: ${{ steps.changeset_list.outputs.lst }}
+    #env:
+    #  folder-to-commit: .
+    #permissions:
+    #  contents: write
+    #outputs:
+    #  changeset_list: ${{ steps.changeset_list.outputs.lst }}
 
     steps:
       - name: Checkout
@@ -36,8 +37,10 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
 
       - name: Install the Rapido SF CLI plugin and return the list of changesets
-        id: changeset_list
-        run: |
-          sf plugins:install RupertBarrow/rapido-sf-plugin
-          lst=$(sf rapido:scrape:changeset:list --json -u ${{ github.event.inputs.salesforce_sfdx_auth_url }} | jq -r .result)
-          echo "lst=$lst" >> $GITHUB_OUTPUT
+        uses: RupertBarrow/actions/action-command@v3
+        with:
+          salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
+          command: "sf plugins:install RupertBarrow/rapido-sf-plugin && sf rapido:scrape:changeset:list --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
+
+      - run: cat OUTPUT.json
+        shell: bash
