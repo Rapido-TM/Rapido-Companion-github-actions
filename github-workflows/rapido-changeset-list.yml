@@ -1,4 +1,4 @@
-name: "Rapido Changeset"
+name: "Rapido Changeset List"
 
 on:
   workflow_dispatch:
@@ -8,14 +8,12 @@ on:
         required: true
     outputs:
       changeset_list:
-        description: "JSON list of changesets, with id, nam, isIncoming, isOutgoing"
+        description: "JSON list of changesets, with id, name, isIncoming, isOutgoing"
         value: ${{ jobs.changeset_list.outputs.changeset_list }}
 
 jobs:
   #########################################################################
-  # Retrieve package from Salesforce (source org)
-  # commit to Github,
-  # deploy to Salesforce (target org)
+  # Get list of changesets from Salesforce
   #
 
   rapido_changeset_list:
