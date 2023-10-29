@@ -1,6 +1,5 @@
 name: Release
-# Create tag and release on branches alpha and release.
-# This also publishes the extension to the Chrome Web Store.
+# Create tag and release on branches alpha, beta and release.
 
 on:
   push:
