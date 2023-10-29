@@ -9,10 +9,10 @@ on:
       salesforce_instance_url:
         description: "Salesforce instance url where to look for changesets"
         required: true
-    outputs:
-      changeset_list:
-        description: "JSON list of changesets, with id, name, isIncoming, isOutgoing"
-        value: ${{ jobs.changeset_list.outputs.changeset_list }}
+    #outputs:
+    #  changeset_list:
+    #    description: "JSON list of changesets, with id, name, isIncoming, isOutgoing"
+    #    value: ${{ jobs.changeset_list.outputs.changeset_list }}
 
 jobs:
   #########################################################################
