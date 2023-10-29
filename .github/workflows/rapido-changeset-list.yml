@@ -1,0 +1,46 @@
+name: "Rapido Changeset List"
+
+on:
+  workflow_dispatch:
+    inputs:
+      salesforce_sfdx_auth_url:
+        description: "Salesforce DX auth url for the sandbox org"
+        required: true
+      salesforce_instance_url:
+        description: "Salesforce instance url where to look for changesets"
+        required: true
+    outputs:
+      changeset_list:
+        description: "JSON list of changesets, with id, name, isIncoming, isOutgoing"
+        value: ${{ jobs.changeset_list.outputs.changeset_list }}
+
+jobs:
+  #########################################################################
+  # Get list of changesets from Salesforce
+  #
+
+  rapido_changeset_list:
+    runs-on: ubuntu-latest
+    container: ${{ inputs.sfdx-docker-image }}
+    name: "List changesets"
+    #env:
+    #  folder-to-commit: .
+    #permissions:
+    #  contents: write
+    #outputs:
+    #  changeset_list: ${{ steps.changeset_list.outputs.lst }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Install the Rapido SF CLI plugin and return the list of changesets
+        uses: RupertBarrow/actions/action-command@v3
+        with:
+          salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
+          command: "sf plugins:install RupertBarrow/rapido-sf-plugin && sf rapido:scrape:changeset:list --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
+
+      - run: cat OUTPUT.json
+        shell: bash
