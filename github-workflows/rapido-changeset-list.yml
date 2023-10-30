@@ -50,7 +50,7 @@ jobs:
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          command: "(echo yes | sf plugins:install RupertBarrow/rapido-sf-plugin) && sf rapido:scrape:changeset:list --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
+          command: "(echo yes | sf plugins:install RupertBarrow/rapido-sf-plugin@0.2.1) && sf rapido:scrape:changeset:list --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
 
       - run: cat OUTPUT.json
         shell: bash
