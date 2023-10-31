@@ -46,6 +46,10 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.17
+
       - name: Install the Rapido SF CLI plugin and return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
