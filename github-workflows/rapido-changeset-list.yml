@@ -60,7 +60,7 @@ jobs:
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          command: "(echo y | sf plugins:install RupertBarrow/rapido-sf-plugin#release)"
+          command: "(echo y | DEBUG=* sf plugins:install RupertBarrow/rapido-sf-plugin#release)"
 
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
