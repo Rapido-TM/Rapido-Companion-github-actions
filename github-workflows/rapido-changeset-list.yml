@@ -50,23 +50,20 @@ jobs:
         with:
           node-version: 18.17
 
-      #- name: Install the Rapido SF CLI plugin and return the list of changesets
-      #  uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
-      #  with:
-      #    salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-      #    command: "(echo y | sf plugins:install RupertBarrow/rapido-sf-plugin#release) && sf rapido:scrape:changeset:list --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
-
+      - name: Nove version
+        run: node -v
+        
       - name: Install the Rapido SF CLI plugin
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          command: "(echo y | DEBUG=* sf plugins:install RupertBarrow/rapido-sf-plugin#release)"
+          command: "echo "Node version" && node -v && (echo y | sf plugins:install RupertBarrow/rapido-sf-plugin#release)"
 
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          command: "sf rapido && sf rapido:scrape:changeset:list -h &&  --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
+          command: "sf rapido && sf rapido:scrape:changeset:list -h &&  sf rapido:scrape:changeset:list --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
 
       - run: cat OUTPUT.json
         shell: bash
