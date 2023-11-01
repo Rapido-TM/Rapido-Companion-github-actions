@@ -18,7 +18,7 @@ on:
       sfdx-docker-image:
         description: "Salesforce DX CLI version, for using the CLI docker image (ex: salesforce/salesforcedx:7.190.2-slim)"
         #default: "salesforce/salesforcedx:7.207.5-slim"
-        default: "salesforce/cli:2.16.3-slim"
+        default: "salesforce/cli:2.15.9-slim"
       #outputs:
     #  changeset_list:
     #    description: "JSON list of changesets, with id, name, isIncoming, isOutgoing"
@@ -50,14 +50,14 @@ jobs:
         with:
           node-version: 18.17
 
-      - name: Nove version
+      - name: Node version
         run: node -v
-        
+
       - name: Install the Rapido SF CLI plugin
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          command: "echo "Node version" && node -v && (echo y | sf plugins:install RupertBarrow/rapido-sf-plugin#release)"
+          command: "echo 'Node version' && node -v && (echo y | sf plugins:install RupertBarrow/rapido-sf-plugin#release)"
 
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
