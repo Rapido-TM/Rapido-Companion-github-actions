@@ -1,3 +1,10 @@
+# [1.0.0-alpha.20](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.19...v1.0.0-alpha.20) (2023-11-02)
+
+
+### Bug Fixes
+
+* use a neutral Docker image, and install Node and SF CLI ourselves to control versions ([0c9dda4](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/0c9dda4f9a9e4eaa37c73314ded0745c4e5691cf))
+
 # [1.0.0-alpha.19](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.18...v1.0.0-alpha.19) (2023-11-01)
 
 
