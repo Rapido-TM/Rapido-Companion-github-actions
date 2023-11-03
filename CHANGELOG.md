@@ -1,3 +1,10 @@
+# [1.0.0-alpha.29](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.28...v1.0.0-alpha.29) (2023-11-03)
+
+
+### Bug Fixes
+
+* using a Puppeteer Docker image ([419464e](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/419464e0803aba5b56777bf9bf611eb3b471edae))
+
 # [1.0.0-alpha.28](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.27...v1.0.0-alpha.28) (2023-11-03)
 
 
