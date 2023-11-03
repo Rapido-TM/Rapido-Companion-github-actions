@@ -54,16 +54,15 @@ jobs:
 
       - name: Install the SF CLI and the Rapido SF CLI plugin
         run: |
-          node --version
           # This installs the CLI *without* its own version of node - see https://github.com/forcedotcom/cli/issues/2550#issuecomment-1788958526
           npm install @salesforce/cli --global
-          echo y | sf plugins:install RupertBarrow/rapido-sf-plugin#release
+          echo y | sf plugins:install rapido-sf-plugin
 
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          command: "sf rapido && sf rapido:scrape:changeset:list -h &&  sf rapido:scrape:changeset:list --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
+          command: "sf rapido:scrape:changeset:list --json -u $(sf org open --url-only -o flowbird-devrupert --json | grep url) > OUTPUT.json"
 
       - run: cat OUTPUT.json
         shell: bash
