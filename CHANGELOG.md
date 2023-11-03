@@ -1,3 +1,10 @@
+# [1.0.0-alpha.26](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.25...v1.0.0-alpha.26) (2023-11-03)
+
+
+### Bug Fixes
+
+* install Puppeteer dependencies ([ef225b0](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/ef225b0c0b5c853ffd75de37222ee308405805cd))
+
 # [1.0.0-alpha.25](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.24...v1.0.0-alpha.25) (2023-11-03)
 
 
