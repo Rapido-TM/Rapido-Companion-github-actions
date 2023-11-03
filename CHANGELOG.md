@@ -1,3 +1,10 @@
+# [1.0.0-alpha.21](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2023-11-03)
+
+
+### Bug Fixes
+
+* install sf plugin from the npm registry, and not from Github ([128365b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/128365b35538221fe4f6f386149d651c2c278e2d))
+
 # [1.0.0-alpha.20](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.19...v1.0.0-alpha.20) (2023-11-02)
 
 
