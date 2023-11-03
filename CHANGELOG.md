@@ -1,3 +1,10 @@
+# [1.0.0-alpha.23](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.22...v1.0.0-alpha.23) (2023-11-03)
+
+
+### Bug Fixes
+
+* clean the url parameter ([3fe5774](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/3fe5774ffe629a10d2c839be530ea14a365c73da))
+
 # [1.0.0-alpha.22](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.21...v1.0.0-alpha.22) (2023-11-03)
 
 
