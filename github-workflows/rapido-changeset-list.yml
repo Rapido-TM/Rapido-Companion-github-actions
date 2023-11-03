@@ -53,6 +53,10 @@ jobs:
 
       - name: Verify sf version
         run: |
+          set -x
+          pwd
+          env
+          echo $HOME
           sf version
           sf plugins
           sf rapido:scrape:changeset:list -h
