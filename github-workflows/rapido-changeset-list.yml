@@ -53,13 +53,6 @@ jobs:
         with:
           node-version: 18.17
 
-      # See https://github.com/awalsh128/cache-apt-pkgs-action
-      - name: Install Puppeteer dependencies
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: libatk1.0-0 libatk-bridge2.0-0 libx11-xcb1 libxcomposite1 libxdamage1 libxfixes3 libcups2 libdrm2 libxrandr2 libgbm1 libasound2 libpangocairo-1.0-0 libgtk-3-0
-          version: 1.0
-
       - name: Install the SF CLI and the Rapido SF CLI plugin
         run: |
           # This installs the CLI *without* its own version of node - see https://github.com/forcedotcom/cli/issues/2550#issuecomment-1788958526
