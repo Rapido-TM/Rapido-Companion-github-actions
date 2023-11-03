@@ -1,3 +1,10 @@
+# [1.0.0-alpha.22](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.21...v1.0.0-alpha.22) (2023-11-03)
+
+
+### Bug Fixes
+
+* connect to the default org ([4914dbf](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/4914dbf858a77d942807d8a8fa43a85f403fc422))
+
 # [1.0.0-alpha.21](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.20...v1.0.0-alpha.21) (2023-11-03)
 
 
