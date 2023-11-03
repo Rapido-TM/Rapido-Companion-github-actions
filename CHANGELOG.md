@@ -1,3 +1,10 @@
+# [1.0.0-alpha.32](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.31...v1.0.0-alpha.32) (2023-11-03)
+
+
+### Features
+
+* switch to Rapido docker image ([1fc64db](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/1fc64dbf0129390a25d32a7f0be29bbea0875511))
+
 # [1.0.0-alpha.31](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.30...v1.0.0-alpha.31) (2023-11-03)
 
 
