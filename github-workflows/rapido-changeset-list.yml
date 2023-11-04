@@ -58,12 +58,12 @@ jobs:
           env
           echo $HOME
           sf version
-          sf plugins
-          sf rapido:scrape:changeset:list -h
+          HOME=/root sf plugins
+          HOME=/root sf rapido:scrape:changeset:list -h
 
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           #command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
-          command: 'HOME=/home/pptruser sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")'
+          command: 'HOME=/root sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")'
