@@ -65,8 +65,5 @@ jobs:
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          #command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
-          command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")'
-
-      - run: cat OUTPUT.json
-        shell: bash
+          #command: 'HOME=/root sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
+          command: 'HOME=/root sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")'
