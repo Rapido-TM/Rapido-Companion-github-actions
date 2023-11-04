@@ -1,3 +1,10 @@
+# [1.0.0-alpha.36](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2023-11-04)
+
+
+### Bug Fixes
+
+* using readable /root/.docker/config.json ([c362c70](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/c362c70c3f932ca7da8f42f823b83c0a4b2acc82))
+
 # [1.0.0-alpha.35](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.34...v1.0.0-alpha.35) (2023-11-04)
 
 
