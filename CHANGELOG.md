@@ -1,3 +1,10 @@
+# [1.0.0-alpha.34](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.33...v1.0.0-alpha.34) (2023-11-04)
+
+
+### Bug Fixes
+
+* fixed HOME and path for plugins ([f60a1f5](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/f60a1f501511f36e3b8e011860dd8b546c448bd5))
+
 # [1.0.0-alpha.33](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.32...v1.0.0-alpha.33) (2023-11-03)
 
 
