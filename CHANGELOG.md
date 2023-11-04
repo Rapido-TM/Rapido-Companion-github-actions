@@ -1,3 +1,10 @@
+# [1.0.0-alpha.37](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2023-11-04)
+
+
+### Bug Fixes
+
+* change HOME for sf plugins to work ([5c57701](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/5c5770125b99d800b26ea871ca95e9738ff3f4a8))
+
 # [1.0.0-alpha.36](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.35...v1.0.0-alpha.36) (2023-11-04)
 
 
