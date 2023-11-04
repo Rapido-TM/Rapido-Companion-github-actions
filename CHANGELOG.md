@@ -1,3 +1,10 @@
+# [1.0.0-alpha.38](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2023-11-04)
+
+
+### Bug Fixes
+
+* change HOME to /root ([6ceb5db](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/6ceb5db258b7dd3fed72c14f1fc20daca3d901c2))
+
 # [1.0.0-alpha.37](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.36...v1.0.0-alpha.37) (2023-11-04)
 
 
