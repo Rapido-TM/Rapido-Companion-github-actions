@@ -39,7 +39,6 @@ jobs:
     name: "List changesets"
     env:
       folder-to-commit: .
-      HOME: /root
     permissions:
       contents: write
     #outputs:
@@ -56,7 +55,6 @@ jobs:
           set -x
           pwd
           env
-          echo $HOME
           sf version
           sf plugins
           sf rapido:scrape:changeset:list -h
@@ -65,5 +63,5 @@ jobs:
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          #command: 'HOME=/root sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
-          command: 'HOME=/root sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")'
+          #command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
+          command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")'
