@@ -22,7 +22,7 @@ on:
         # We don't use a Salesforce Docker image, because we need to controle the Node version - see https://github.com/forcedotcom/cli/issues/2550#issuecomment-1788958526
         #default: "heroku/heroku:22"
         #default: "ghcr.io/puppeteer/puppeteer:21.5.0"
-        default: "rupertbarrow/rapido-sf-cli:1.0.24"
+        default: "rupertbarrow/rapido-sf-cli:latest"
       #outputs:
     #  changeset_list:
     #    description: "JSON list of changesets, with id, name, isIncoming, isOutgoing"
