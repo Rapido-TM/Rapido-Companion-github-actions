@@ -37,6 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ${{ inputs.sfdx-docker-image }}
+      options: --user root
     name: "List changesets"
     env:
       folder-to-commit: .
