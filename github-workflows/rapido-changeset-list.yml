@@ -59,7 +59,7 @@ jobs:
           env
           echo $HOME
           sf version
-          HOME=/root sf plugins
+          sf plugins
           HOME=/root sf rapido:scrape:changeset:list -h
 
       - name: Return the list of changesets
