@@ -41,7 +41,7 @@ jobs:
     name: "List changesets"
     env:
       folder-to-commit: .
-      #HOME: /root
+      HOME: /root
     permissions:
       contents: write
     #outputs:
