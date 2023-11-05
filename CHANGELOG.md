@@ -1,3 +1,10 @@
+# [1.0.0-alpha.39](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.38...v1.0.0-alpha.39) (2023-11-05)
+
+
+### Bug Fixes
+
+* update Docker image version to "latest" ([5feca72](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/5feca7264481c10211e17fe0be45f4403ca7b21d))
+
 # [1.0.0-alpha.38](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.37...v1.0.0-alpha.38) (2023-11-04)
 
 
