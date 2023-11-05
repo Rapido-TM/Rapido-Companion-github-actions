@@ -37,10 +37,11 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ${{ inputs.sfdx-docker-image }}
-      options: --user root --env HOME=/root
+      options: --user root
     name: "List changesets"
     env:
       folder-to-commit: .
+      HOME: /root
     permissions:
       contents: write
     #outputs:
@@ -61,9 +62,9 @@ jobs:
           sf version
           sf plugins
           HOME=/root sf rapido:scrape:changeset:list -h
-          whoami
+          arch
           ls -al /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64
-          type /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64
+          type /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64/chrome
           /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64/chrome --version
 
       - name: Return the list of changesets
