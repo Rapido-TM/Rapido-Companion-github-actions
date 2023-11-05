@@ -61,6 +61,7 @@ jobs:
           sf version
           sf plugins
           HOME=/root sf rapido:scrape:changeset:list -h
+          ls -al /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64
 
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
