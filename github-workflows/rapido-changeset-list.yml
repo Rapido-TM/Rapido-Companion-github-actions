@@ -35,11 +35,12 @@ jobs:
 
   rapido_changeset_list:
     runs-on: ubuntu-latest
-    container: ${{ inputs.sfdx-docker-image }}
+    container:
+      image: ${{ inputs.sfdx-docker-image }}
+      options: --user root --env HOME=/root
     name: "List changesets"
     env:
       folder-to-commit: .
-      HOME: /home/pptruser
     permissions:
       contents: write
     #outputs:
