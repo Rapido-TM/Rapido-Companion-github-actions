@@ -37,11 +37,11 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ${{ inputs.sfdx-docker-image }}
-      options: --user root
+      #options: --user root
     name: "List changesets"
     env:
       folder-to-commit: .
-      HOME: /root
+      #HOME: /root
     permissions:
       contents: write
     #outputs:
