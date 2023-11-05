@@ -1,3 +1,10 @@
+# [1.0.0-alpha.44](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.43...v1.0.0-alpha.44) (2023-11-05)
+
+
+### Bug Fixes
+
+* fix options for Docker (user, env) ([2a52192](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/2a5219246525f839f3b0bef4d60486c6eed29c87))
+
 # [1.0.0-alpha.43](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.42...v1.0.0-alpha.43) (2023-11-05)
 
 
