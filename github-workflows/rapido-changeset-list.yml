@@ -57,6 +57,7 @@ jobs:
           set -x
           pwd
           env
+          export HOME=/root
           echo $HOME
           sf version
           sf plugins
