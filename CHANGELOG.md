@@ -1,3 +1,10 @@
+# [1.0.0-alpha.56](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.55...v1.0.0-alpha.56) (2023-11-05)
+
+
+### Bug Fixes
+
+* getting Chrome to start ([df6c990](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/df6c990f6ec181f1d0cddf43f9414de135d37b03))
+
 # [1.0.0-alpha.55](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.54...v1.0.0-alpha.55) (2023-11-05)
 
 
