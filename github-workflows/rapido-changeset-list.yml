@@ -60,6 +60,7 @@ jobs:
           export HOME=/root
           echo $HOME
           sf version
+          sf plugins:install rupertbarrow/rapido-sf-plugin
           sf plugins
           HOME=/root sf rapido:scrape:changeset:list --help
 
