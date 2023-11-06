@@ -62,7 +62,6 @@ jobs:
           sf version
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
-          sf org display --verbose
           sf rapido:scrape:changeset:list --help
 
       - name: Return the list of changesets
