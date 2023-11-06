@@ -1,3 +1,10 @@
+# [1.0.0-alpha.66](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.65...v1.0.0-alpha.66) (2023-11-06)
+
+
+### Bug Fixes
+
+* debugging salesforce auth ([4511b81](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/4511b81541ad188d6f87836ea4335b81b8199523))
+
 # [1.0.0-alpha.65](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.64...v1.0.0-alpha.65) (2023-11-06)
 
 
