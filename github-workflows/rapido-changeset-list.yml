@@ -67,7 +67,7 @@ jobs:
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
           sf rapido:scrape:changeset:list --help
-          sf org assign permset -n "DevOps_Center" -o flowbird-devrupert
+          sf org list
 
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
