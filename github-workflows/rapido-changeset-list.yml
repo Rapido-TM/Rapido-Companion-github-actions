@@ -74,4 +74,4 @@ jobs:
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           #command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
-          command: "set -x && sf org display --verbose && sf org list && sf org assign permset -n "DevOps_Center" -o flowbird-devrupert && HOME=/root sf rapido:scrape:changeset:list -o checkout --json"
+          command: "set -x && sf org display --verbose && sf org list && sf org assign permset -n DevOps_Center -o flowbird-devrupert && HOME=/root sf rapido:scrape:changeset:list -o checkout --json"
