@@ -1,3 +1,10 @@
+# [1.0.0-alpha.65](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.64...v1.0.0-alpha.65) (2023-11-06)
+
+
+### Bug Fixes
+
+* pass -o checkout (alias now fixed in RupertBarrow/actions) ([ced7d1b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/ced7d1b2af136f6b1efba5981d7fb6f5afb554e0))
+
 # [1.0.0-alpha.64](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.63...v1.0.0-alpha.64) (2023-11-06)
 
 
