@@ -62,6 +62,7 @@ jobs:
           sf version
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
+          sf org display --verbose
           sf rapido:scrape:changeset:list --help
 
       - name: Return the list of changesets
@@ -69,4 +70,4 @@ jobs:
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           #command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
-          command: 'HOME=/root sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")'
+          command: 'sf org display --verbose && HOME=/root sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")'
