@@ -1,3 +1,10 @@
+# [1.0.0-alpha.63](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.62...v1.0.0-alpha.63) (2023-11-06)
+
+
+### Bug Fixes
+
+* pass salesforce_username parameter to log in with sf plugin ([38c644c](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/38c644c849ec964ccf3dbe2a7648a84cb6062727))
+
 # [1.0.0-alpha.62](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.61...v1.0.0-alpha.62) (2023-11-06)
 
 
