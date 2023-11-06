@@ -1,3 +1,10 @@
+# [1.0.0-alpha.62](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.61...v1.0.0-alpha.62) (2023-11-06)
+
+
+### Bug Fixes
+
+* using -o target-org instead of -u url ([eb6589d](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/eb6589dd2adcf1be456e5ddc77446d79a8d25977))
+
 # [1.0.0-alpha.61](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.60...v1.0.0-alpha.61) (2023-11-06)
 
 
