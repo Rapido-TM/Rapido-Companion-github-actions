@@ -69,7 +69,7 @@ jobs:
           #ls -al /root /root/.local /root/.local/share
 
           echo sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
-          echo ${{ github.event.inputs.salesforce_instance_url }} > ./instanceurl.txt
+          echo ${{ github.event.inputs.salesforce_sfdx_auth_url }} > ./sfdxauthurl.txt
           sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
           rm -f ./sfdxauthurl.txt
 
