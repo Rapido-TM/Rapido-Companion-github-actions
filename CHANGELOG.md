@@ -1,3 +1,10 @@
+# [1.0.0-alpha.102](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.101...v1.0.0-alpha.102) (2023-11-07)
+
+
+### Bug Fixes
+
+* use updated rapido-sf-cli image ([797ba32](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/797ba325f199d0a0a086c4faee4f845bab7f0002))
+
 # [1.0.0-alpha.101](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.100...v1.0.0-alpha.101) (2023-11-07)
 
 
