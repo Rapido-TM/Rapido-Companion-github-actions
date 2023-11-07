@@ -76,5 +76,5 @@ jobs:
           sf org list
 
 
-          url=$(sf org open -p /changemgmt/listOutboundChangeSet.apexp --url-only -o checkout --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")
-          sf rapido:scrape:changeset:list2 -u $url --json
+          url=$(sf org open -p /changemgmt/listOutboundChangeSet.apexp --url-only -o checkout --path=/changemgmt/listOutboundChangeSet.apexp --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")
+          sf rapido:scrape:changeset:list2 -u '$url' --json
