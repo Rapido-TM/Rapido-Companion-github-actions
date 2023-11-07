@@ -1,3 +1,10 @@
+# [1.0.0-alpha.103](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.102...v1.0.0-alpha.103) (2023-11-07)
+
+
+### Bug Fixes
+
+* install sf cli globally ([4ee7006](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/4ee7006f330535f49d6519c43d0951fe218327cd))
+
 # [1.0.0-alpha.102](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.101...v1.0.0-alpha.102) (2023-11-07)
 
 
