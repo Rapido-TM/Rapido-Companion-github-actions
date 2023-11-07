@@ -51,14 +51,10 @@ jobs:
       #  with:
       #    node-version: 18.18
 
-      - name: Install jq
-        uses: mbround18/install-jq@v1
-
       - name: Verify versions
         run: |
           set -x
           pwd
-          /usr/local/bin/jq --version
           npm install @salesforce/cli --global
           sf version
           echo y | sf plugins:install rapido-sf-plugin
@@ -80,5 +76,5 @@ jobs:
           sf org list
 
 
-          url=$(sf org open -p /changemgmt/listOutboundChangeSet.apexp --url-only -o checkout --json | jq -r '.result.url')
+          url=$(sf org open -p /changemgmt/listOutboundChangeSet.apexp --url-only -o checkout --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g")
           sf rapido:scrape:changeset:list2 -u $url --json
