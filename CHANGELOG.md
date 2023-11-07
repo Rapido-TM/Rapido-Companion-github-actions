@@ -1,3 +1,10 @@
+# [1.0.0-alpha.89](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.88...v1.0.0-alpha.89) (2023-11-07)
+
+
+### Bug Fixes
+
+* debugging puppeteer ([7ce24e4](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/7ce24e4d8b2105591dac565e9a95735b8049a42b))
+
 # [1.0.0-alpha.88](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.87...v1.0.0-alpha.88) (2023-11-07)
 
 
