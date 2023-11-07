@@ -52,6 +52,7 @@ jobs:
           pwd
           env
           sf version
+          npm install puppeteer@21.5.0 puppeteer-core@21.5.0
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
           sf rapido:scrape:changeset:list --help
