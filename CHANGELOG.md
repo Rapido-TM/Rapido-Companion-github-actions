@@ -1,3 +1,10 @@
+# [1.0.0-alpha.104](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.103...v1.0.0-alpha.104) (2023-11-07)
+
+
+### Bug Fixes
+
+* auth correctly ([abfff2b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/abfff2b57f30f48f296800205730bd15ff399178))
+
 # [1.0.0-alpha.103](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.102...v1.0.0-alpha.103) (2023-11-07)
 
 
