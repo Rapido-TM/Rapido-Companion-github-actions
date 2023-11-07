@@ -1,3 +1,10 @@
+# [1.0.0-alpha.110](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.109...v1.0.0-alpha.110) (2023-11-07)
+
+
+### Bug Fixes
+
+* used sed instead of jq ([ba34d07](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/ba34d07c5d3e12105e1e54405365dd47ea176c2d))
+
 # [1.0.0-alpha.109](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.108...v1.0.0-alpha.109) (2023-11-07)
 
 
