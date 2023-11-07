@@ -1,3 +1,10 @@
+# [1.0.0-alpha.92](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.91...v1.0.0-alpha.92) (2023-11-07)
+
+
+### Bug Fixes
+
+* trying to use mcshane plugin ([7487e7d](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/7487e7de9f13197c74cce8fdd512d529b7b3a7b5))
+
 # [1.0.0-alpha.91](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.90...v1.0.0-alpha.91) (2023-11-07)
 
 
