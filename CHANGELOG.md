@@ -1,3 +1,11 @@
+# [1.0.0-alpha.107](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.106...v1.0.0-alpha.107) (2023-11-07)
+
+
+### Bug Fixes
+
+* parse url with jq ([4f0891d](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/4f0891dd155724d2dbee504f979f8ad130ae1675))
+* parse url with jq ([c5f4e55](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/c5f4e55d08dc77d337d5ac5a7c0c288f349b3025))
+
 # [1.0.0-alpha.106](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.105...v1.0.0-alpha.106) (2023-11-07)
 
 
