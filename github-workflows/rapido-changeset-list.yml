@@ -61,8 +61,8 @@ jobs:
           set -x
           pwd
           env
-          #export HOME=/root
-          #echo $HOME
+          export HOME=/root
+          echo $HOME
           sf version
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
@@ -72,7 +72,8 @@ jobs:
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
+          home: "/root"
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           #command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
           #command: "set -x && sf org display --verbose && sf org list && sf org assign permset -n DevOps_Center -o checkout && HOME=/root sf rapido:scrape:changeset:list -u checkout --json"
-          command: 'set -x && env && sf org display --verbose && sf org list && HOME=/root sf org list && url=$(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") && echo "url=$url" && HOME=/root sf rapido:scrape:changeset:list --json'
+          command: 'set -x && env && sf org display --verbose && sf org list && url=$(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") && echo "url=$url" && sf rapido:scrape:changeset:list --json'
