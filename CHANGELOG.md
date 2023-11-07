@@ -1,3 +1,10 @@
+# [1.0.0-alpha.101](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.100...v1.0.0-alpha.101) (2023-11-07)
+
+
+### Bug Fixes
+
+* use updated rapido-docker image ([0f54d81](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/0f54d81a0e42a8d4d2405337ac370f3e2ea2ea77))
+
 # [1.0.0-alpha.100](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.99...v1.0.0-alpha.100) (2023-11-07)
 
 
