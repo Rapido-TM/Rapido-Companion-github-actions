@@ -59,11 +59,13 @@ jobs:
           which node
           node --version
           which npm
-          npm install puppeteer@21.5.0 puppeteer-core@21.5.0
-          ls -al /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64
-          ls -al /root /root/.local /root/.local/share
+          #npm install puppeteer@21.5.0 puppeteer-core@21.5.0
+          #ls -al /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64
+          #ls -al /root /root/.local /root/.local/share
           sf version
           echo y | sf plugins:install rapido-sf-plugin
+          echo y | sf plugins:install shane-sfdx-plugins
+          echo '{ "description": "updated by plugin" }' > /tmp/attributes.json 
           sf plugins
           sf rapido:scrape:changeset:list --help
           sf org list
@@ -73,4 +75,4 @@ jobs:
         with:
           home: /root
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          command: "set -x && env && sf org display --verbose && sf org list && sf plugins && sf rapido:scrape:changeset:list2 -u checkout --json"
+          command: "set -x && env && sf org display --verbose && sf org list && sf plugins && sf shane:connectedapp:attributes -n Rapido_DevOps_Companion -u flowbird-devrupert -a attributes.json && sf rapido:scrape:changeset:list2 -u checkout --json"
