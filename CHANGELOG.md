@@ -1,3 +1,10 @@
+# [1.0.0-alpha.109](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.108...v1.0.0-alpha.109) (2023-11-07)
+
+
+### Bug Fixes
+
+* install jq ([c47dd24](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/c47dd242c0f87f580633267646ce1c68e08b019e))
+
 # [1.0.0-alpha.108](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.107...v1.0.0-alpha.108) (2023-11-07)
 
 
