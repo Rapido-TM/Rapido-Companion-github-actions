@@ -1,3 +1,10 @@
+# [1.0.0-alpha.86](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.85...v1.0.0-alpha.86) (2023-11-07)
+
+
+### Bug Fixes
+
+* install node for npm ([201e7f7](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/201e7f71dda6b45540b982a7c3671bd2e2e88551))
+
 # [1.0.0-alpha.85](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.84...v1.0.0-alpha.85) (2023-11-07)
 
 
