@@ -1,3 +1,10 @@
+# [1.0.0-alpha.81](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.80...v1.0.0-alpha.81) (2023-11-07)
+
+
+### Bug Fixes
+
+* install Puppeteer in /github/home ([a7f8e2d](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/a7f8e2d0e06fe193112bd453b628393891670ee5))
+
 # [1.0.0-alpha.80](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.79...v1.0.0-alpha.80) (2023-11-07)
 
 
