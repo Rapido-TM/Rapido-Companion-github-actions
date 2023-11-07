@@ -1,3 +1,10 @@
+# [1.0.0-alpha.83](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.82...v1.0.0-alpha.83) (2023-11-07)
+
+
+### Bug Fixes
+
+* try in HOME=/root ([b8ba192](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/b8ba1922f090e11d1ee34ceadde8e3c9d8f7cb85))
+
 # [1.0.0-alpha.82](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.81...v1.0.0-alpha.82) (2023-11-07)
 
 
