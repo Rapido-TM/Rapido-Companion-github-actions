@@ -1,3 +1,10 @@
+# [1.0.0-alpha.75](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.74...v1.0.0-alpha.75) (2023-11-07)
+
+
+### Bug Fixes
+
+* install plugin in same Run as checking plugins installed ([1651fa3](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/1651fa3e641f4cb891d5e930688a379c6d462f39))
+
 # [1.0.0-alpha.74](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.73...v1.0.0-alpha.74) (2023-11-07)
 
 
