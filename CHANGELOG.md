@@ -1,3 +1,10 @@
+# [1.0.0-alpha.73](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.72...v1.0.0-alpha.73) (2023-11-07)
+
+
+### Bug Fixes
+
+* verify url before starting rapido ([d1c1456](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/d1c1456632fb46e9325dfa3320ce77742207210e))
+
 # [1.0.0-alpha.72](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.71...v1.0.0-alpha.72) (2023-11-07)
 
 
