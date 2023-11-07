@@ -60,6 +60,8 @@ jobs:
           node --version
           which npm
           npm install puppeteer@21.5.0 puppeteer-core@21.5.0
+          ls -al /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64
+          ls -al /root /root/.local /root/.local/share
           sf version
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
