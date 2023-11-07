@@ -52,8 +52,11 @@ jobs:
           pwd
           env
           export HOME=/root
-          sf version
+          which node
+          node --version
+          which npm
           npm install puppeteer@21.5.0 puppeteer-core@21.5.0
+          sf version
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
           sf rapido:scrape:changeset:list --help
