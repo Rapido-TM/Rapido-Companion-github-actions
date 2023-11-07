@@ -55,6 +55,7 @@ jobs:
         run: |
           set -x
           pwd
+          npm install node-jq         --global
           npm install @salesforce/cli --global
           sf version
           echo y | sf plugins:install rapido-sf-plugin
@@ -74,5 +75,8 @@ jobs:
           rm -f ./sfdxauthurl.txt
 
           sf org list
+
+
+          url=$(sf org open -p /changemgmt/listOutboundChangeSet.apexp --url-only -o checkout --json | jq -r '.result.url')
 
           sf rapido:scrape:changeset:list2 -u checkout --json
