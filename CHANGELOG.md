@@ -1,3 +1,10 @@
+# [1.0.0-alpha.99](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.98...v1.0.0-alpha.99) (2023-11-07)
+
+
+### Bug Fixes
+
+* issue number ([3aab0cd](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/3aab0cd63982eabfcc1bb4b1ef3a7b8d88011284))
+
 # [1.0.0-alpha.98](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.97...v1.0.0-alpha.98) (2023-11-07)
 
 
