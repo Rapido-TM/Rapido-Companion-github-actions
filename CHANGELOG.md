@@ -1,3 +1,10 @@
+# [1.0.0-alpha.78](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.77...v1.0.0-alpha.78) (2023-11-07)
+
+
+### Bug Fixes
+
+* using home parameter passed to run the action ([49c66c5](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/49c66c5b76234964f4fe89f3d38de3cc82638878))
+
 # [1.0.0-alpha.77](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.76...v1.0.0-alpha.77) (2023-11-07)
 
 
