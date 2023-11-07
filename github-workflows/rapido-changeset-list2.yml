@@ -46,6 +46,10 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.18
+
       - name: Verify versions
         run: |
           set -x
