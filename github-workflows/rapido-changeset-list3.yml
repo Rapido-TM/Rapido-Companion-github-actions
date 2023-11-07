@@ -73,4 +73,6 @@ jobs:
           sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
           rm -f ./sfdxauthurl.txt
 
+          sf org list
+
           sf rapido:scrape:changeset:list2 -u checkout --json
