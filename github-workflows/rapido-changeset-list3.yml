@@ -51,11 +51,14 @@ jobs:
       #  with:
       #    node-version: 18.18
 
+      - name: Install JQ Tool
+        uses: mbround18/install-jq@v1
+
       - name: Verify versions
         run: |
           set -x
           pwd
-          npm install node-jq         --global
+          which jq
           npm install @salesforce/cli --global
           sf version
           echo y | sf plugins:install rapido-sf-plugin
