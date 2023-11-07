@@ -69,5 +69,6 @@ jobs:
       - name: Return the list of changesets
         uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
+          home: /root
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
           command: "set -x && env && sf org display --verbose && sf org list && sf plugins && sf rapido:scrape:changeset:list2 -u checkout --json"
