@@ -1,3 +1,10 @@
+# [1.0.0-alpha.79](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.78...v1.0.0-alpha.79) (2023-11-07)
+
+
+### Features
+
+* new implementation of list2 ([e8ef220](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/e8ef22056ec9ff6e1bcdad4a2521db709587c07d))
+
 # [1.0.0-alpha.78](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.77...v1.0.0-alpha.78) (2023-11-07)
 
 
