@@ -73,7 +73,7 @@ jobs:
           rm -f ./sfdxauthurl.txt
 
       - name: Test Code
-        uses: rupertbarrow/puppeteer-headful:18.18
+        uses: rupertbarrow/puppeteer-headful@18.18
         env:
           CI: "true"
         with:
