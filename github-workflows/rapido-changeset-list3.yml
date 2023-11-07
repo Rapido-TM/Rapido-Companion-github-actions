@@ -22,7 +22,7 @@ on:
       sfdx-docker-image:
         description: "Salesforce DX CLI version, for using the CLI docker image (ex: salesforce/salesforcedx:7.190.2-slim)"
         #default: "salesforce/cli:2.17.5-slim"
-        default: "rupertbarrow/puppeteer-headful@node-18.18"
+        default: "rupertbarrow/puppeteer-headful@Node-18.18"
 jobs:
   #########################################################################
   # Get list of changesets from Salesforce
@@ -73,7 +73,7 @@ jobs:
           rm -f ./sfdxauthurl.txt
 
       - name: Test Code
-        uses: rupertbarrow/puppeteer-headful@node-18.18
+        uses: rupertbarrow/puppeteer-headful@Node-18.18
         env:
           CI: "true"
         with:
