@@ -78,5 +78,4 @@ jobs:
 
 
           url=$(sf org open -p /changemgmt/listOutboundChangeSet.apexp --url-only -o checkout --json | jq -r '.result.url')
-
-          sf rapido:scrape:changeset:list2 -u checkout --json
+          sf rapido:scrape:changeset:list2 -u $url --json
