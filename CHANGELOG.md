@@ -1,3 +1,10 @@
+# [1.0.0-alpha.97](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.96...v1.0.0-alpha.97) (2023-11-07)
+
+
+### Features
+
+* testing RupertBarrow/puppeteer-headful/tree/Node-18.18 ([2f4defa](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/2f4defa78fe6d0c4ce0daf1a85ce4970f34bc06a))
+
 # [1.0.0-alpha.96](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.95...v1.0.0-alpha.96) (2023-11-07)
 
 
