@@ -56,10 +56,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
 
-      - name: Install the sf cli Rapido plugin
-        run: |
-          echo y | sf plugins:install rapido-sf-plugin
-
       - name: Verify versions
         run: |
           set -x
@@ -68,6 +64,7 @@ jobs:
           export HOME=/root
           echo $HOME
           sf version
+          echo y | sf plugins:install rapido-sf-plugin
           sf plugins
           sf rapido:scrape:changeset:list --help
           sf org list
