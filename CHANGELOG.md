@@ -1,3 +1,10 @@
+# [1.0.0-alpha.76](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.75...v1.0.0-alpha.76) (2023-11-07)
+
+
+### Bug Fixes
+
+* test impact of HOME=/root ([c23985b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/c23985b50b0d8a6649c9b322157f5fd20422ecd9))
+
 # [1.0.0-alpha.75](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.74...v1.0.0-alpha.75) (2023-11-07)
 
 
