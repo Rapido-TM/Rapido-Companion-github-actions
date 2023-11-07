@@ -1,3 +1,10 @@
+# [1.0.0-alpha.98](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.97...v1.0.0-alpha.98) (2023-11-07)
+
+
+### Features
+
+* test using rapido-docker with Puppeteer for Github Actions ([b07c63a](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/b07c63a1d30dd72e24cfb67d17f9fc810fea8bf1))
+
 # [1.0.0-alpha.97](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.96...v1.0.0-alpha.97) (2023-11-07)
 
 
