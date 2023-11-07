@@ -75,4 +75,4 @@ jobs:
         with:
           home: /root
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
-          command: "set -x && env && sf org display --verbose && sf org list && sf plugins && sf shane:connectedapp:attributes -n Rapido_DevOps_Companion -u flowbird-devrupert -a attributes.json && sf rapido:scrape:changeset:list2 -u checkout --json"
+          command: "set -x && env && sf org display --verbose && sf org list && sf plugins && sf shane:connectedapp:attributes -n Rapido_DevOps_Companion -u checkout -a attributes.json && sf rapido:scrape:changeset:list2 -u checkout --json"
