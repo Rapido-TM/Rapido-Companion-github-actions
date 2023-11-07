@@ -1,3 +1,10 @@
+# [1.0.0-alpha.112](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.111...v1.0.0-alpha.112) (2023-11-07)
+
+
+### Bug Fixes
+
+* pass -u url correctly ([a8566ac](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/a8566acbe8ecff2889c2346895faaf21ac8e7fc0))
+
 # [1.0.0-alpha.111](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.110...v1.0.0-alpha.111) (2023-11-07)
 
 
