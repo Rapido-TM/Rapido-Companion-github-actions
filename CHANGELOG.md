@@ -1,3 +1,10 @@
+# [1.0.0-alpha.113](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.112...v1.0.0-alpha.113) (2023-11-08)
+
+
+### Bug Fixes
+
+* switch back to -o username ([d63c504](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/d63c5045fccfa75eddc4adf7b587210b8c2513fd))
+
 # [1.0.0-alpha.112](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.111...v1.0.0-alpha.112) (2023-11-07)
 
 
