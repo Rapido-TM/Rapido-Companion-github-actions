@@ -1,3 +1,10 @@
+# [1.0.0-alpha.119](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.118...v1.0.0-alpha.119) (2023-11-09)
+
+
+### Features
+
+* using new Docker image with Puppeteer dependencies and sf cli ([27c2d3a](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/27c2d3afcd1754af5119082038734a788257a757))
+
 # [1.0.0-alpha.118](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.117...v1.0.0-alpha.118) (2023-11-09)
 
 
