@@ -76,6 +76,6 @@ jobs:
           sf org display --verbose
           sf org list
           echo $HOME
-          ls -al /root /root/.sf ~ ~/.sf
+          ls -al ~ ~/.sf ~/.sfdx ~/.cache 
 
           sf rapido:scrape:changeset:list2 --json -o ${{ github.event.inputs.salesforce_username }}
