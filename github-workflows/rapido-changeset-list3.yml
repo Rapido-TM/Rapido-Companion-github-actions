@@ -51,7 +51,7 @@ jobs:
       #  with:
       #    node-version: 18.18
 
-      - name: Verify versions
+      - name: Install and run to get changeset list
         run: |
           set -x
           pwd
@@ -76,6 +76,9 @@ jobs:
           sf org display --verbose
           sf org list
           echo $HOME
-          ls -al ~ ~/.sf ~/.sfdx ~/.cache 
+          ls -al ~/.sfdx ~/.cache/sf
+          cat ~/.sfdx/alias.json
+          cat ~/.sfdx/barrow.rapido@flowbird.group.devrupert.json
+          cat ~/.sfdx/key.json
 
           sf rapido:scrape:changeset:list2 --json -o ${{ github.event.inputs.salesforce_username }}
