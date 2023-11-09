@@ -1,3 +1,11 @@
+# [1.0.0-alpha.122](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.121...v1.0.0-alpha.122) (2023-11-09)
+
+
+### Bug Fixes
+
+* running with the same user ([a281d6e](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/a281d6e646275b1de76f6aabc0e53d1315164404))
+* running with the same user ([aaf9a1b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/aaf9a1bc8202ecdabab5e77a06763d8eea81a6f3))
+
 # [1.0.0-alpha.121](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.120...v1.0.0-alpha.121) (2023-11-09)
 
 
