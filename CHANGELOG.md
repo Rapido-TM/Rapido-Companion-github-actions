@@ -1,3 +1,10 @@
+# [1.0.0-alpha.117](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.116...v1.0.0-alpha.117) (2023-11-09)
+
+
+### Bug Fixes
+
+* debugging sf credentials path in ~/.sfdx ([17ca6b1](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/17ca6b1f11dc13a785abb4a7ca90fcee982d735d))
+
 # [1.0.0-alpha.116](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.115...v1.0.0-alpha.116) (2023-11-09)
 
 
