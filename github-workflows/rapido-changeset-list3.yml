@@ -55,18 +55,10 @@ jobs:
         run: |
           set -x
           pwd
-          #npm install @salesforce/cli --global
           sf version
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
           sf rapido:scrape:changeset:list --help
-
-          #which node
-          #node --version
-          #which npm
-          #npm install puppeteer@21.5.0 puppeteer-core@21.5.0
-          #ls -al /root/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64
-          #ls -al /root /root/.local /root/.local/share
 
           echo sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
           echo ${{ github.event.inputs.salesforce_sfdx_auth_url }} > ./sfdxauthurl.txt
@@ -81,4 +73,4 @@ jobs:
           cat ~/.sfdx/barrow.rapido@flowbird.group.devrupert.json
           cat ~/.sfdx/key.json
 
-          sf rapido:scrape:changeset:list2 --json -o ${{ github.event.inputs.salesforce_username }}
+          sf rapido:scrape:changeset:list2 --json -o barrow.rapido@flowbird.group.devrupert
