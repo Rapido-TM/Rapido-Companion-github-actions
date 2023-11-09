@@ -70,7 +70,7 @@ jobs:
           echo $HOME
           ls -al ~/.sfdx ~/.cache/sf
           cat ~/.sfdx/alias.json
-          cat ~/.sfdx/barrow.rapido@flowbird.group.devrupert.json
-          cat ~/.sfdx/key.json
+          //cat ~/.sfdx/barrow.rapido@flowbird.group.devrupert.json
+          //cat ~/.sfdx/key.json
 
-          sf rapido:scrape:changeset:list2 --json -o barrow.rapido@flowbird.group.devrupert
+          sf rapido:scrape:changeset:list2 --json -o checkout
