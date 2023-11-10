@@ -1,4 +1,4 @@
-name: "Rapido Changeset List3"
+name: "Rapido Changeset List1"
 
 on:
   workflow_dispatch:
@@ -21,8 +21,17 @@ on:
         default: "Created by Rapido Companion"
       sfdx-docker-image:
         description: "Salesforce DX CLI version, for using the CLI docker image (ex: salesforce/salesforcedx:7.190.2-slim)"
-        #default: "salesforce/cli:2.17.5-slim"
+        #default: "salesforce/salesforcedx:7.207.5-slim"
+        #default: "salesforce/cli:2.15.9-slim"
+        # We don't use a Salesforce Docker image, because we need to controle the Node version - see https://github.com/forcedotcom/cli/issues/2550#issuecomment-1788958526
+        #default: "heroku/heroku:22"
+        #default: "ghcr.io/puppeteer/puppeteer:21.5.0"
         default: "rupertbarrow/rapido-sf-cli:latest"
+      #outputs:
+    #  changeset_list:
+    #    description: "JSON list of changesets, with id, name, isIncoming, isOutgoing"
+    #    value: ${{ jobs.changeset_list.outputs.changeset_list }}
+
 jobs:
   #########################################################################
   # Get list of changesets from Salesforce
@@ -32,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ${{ inputs.sfdx-docker-image }}
-      #options: --user root
+      options: --user root
     name: "List changesets"
     env:
       folder-to-commit: .
@@ -47,30 +56,24 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
 
-      #- uses: actions/setup-node@v3
-      #  with:
-      #    node-version: 18.18
-
-      - name: Install and run to get changeset list
+      - name: Verify versions
         run: |
           set -x
           pwd
+          env
+          export HOME=/root
+          echo $HOME
           sf version
           echo y | sf plugins:install rapido-sf-plugin
           sf plugins
           sf rapido:scrape:changeset:list --help
-
-          echo sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
-          echo ${{ github.event.inputs.salesforce_sfdx_auth_url }} > ./sfdxauthurl.txt
-          sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
-          rm -f ./sfdxauthurl.txt
-
-          sf org display --verbose
           sf org list
-          echo $HOME
-          ls -al ~/.sfdx ~/.cache/sf
-          #cat ~/.sfdx/alias.json
-          #cat ~/.sfdx/barrow.rapido@flowbird.group.devrupert.json
-          #cat ~/.sfdx/key.json
 
-          SF_LOG_LEVEL=debug DEBUG=* sf rapido:scrape:changeset:list3 -o checkout
+      - name: Return the list of changesets
+        uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
+        with:
+          home: "/root"
+          salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url }}
+          #command: 'sf rapido:scrape:changeset:list --json -u $(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") > OUTPUT.json'
+          #command: "set -x && sf org display --verbose && sf org list && sf org assign permset -n DevOps_Center -o checkout && HOME=/root sf rapido:scrape:changeset:list -u checkout --json"
+          command: 'set -x && env && sf org display --verbose && sf org list && url=$(sf org open --url-only --json | grep url | sed "s/\"url\"://" | sed "s/,//" | sed "s/\"//g" | sed "s/ //g") && echo "url=$url" && sf rapido:scrape:changeset:list --json'
