@@ -69,8 +69,8 @@ jobs:
           sf org list
           echo $HOME
           ls -al ~/.sfdx ~/.cache/sf
-          cat ~/.sfdx/alias.json
+          #cat ~/.sfdx/alias.json
           #cat ~/.sfdx/barrow.rapido@flowbird.group.devrupert.json
           #cat ~/.sfdx/key.json
 
-          sf rapido:scrape:changeset:list3 --json -o checkout
+          DEBUG=* sf rapido:scrape:changeset:list3 --json -o checkout
