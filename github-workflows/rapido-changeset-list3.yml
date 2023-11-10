@@ -73,4 +73,4 @@ jobs:
           #cat ~/.sfdx/barrow.rapido@flowbird.group.devrupert.json
           #cat ~/.sfdx/key.json
 
-          DEBUG=* sf rapido:scrape:changeset:list3 --json -o checkout
+          SF_LOG_LEVEL=debug DEBUG=* sf rapido:scrape:changeset:list3 --json -o checkout
