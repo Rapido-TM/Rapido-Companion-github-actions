@@ -1,3 +1,10 @@
+# [1.0.0-alpha.130](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.129...v1.0.0-alpha.130) (2023-11-10)
+
+
+### Bug Fixes
+
+* change the output of the command ([62e9459](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/62e94594cde59b7e70789c510ebee5d22af687b7))
+
 # [1.0.0-alpha.129](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.128...v1.0.0-alpha.129) (2023-11-10)
 
 
