@@ -47,7 +47,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
 
-      - name: Install and run to get changeset list
+      - name: Get changeset list
         id: changeset_list
         run: |
           # Node and the sf cli are already installed in the Docker image container
@@ -58,8 +58,4 @@ jobs:
           rm -f ./sfdxauthurl.txt
 
           mkdir -p manifest/changesets
-          sf rapido:scrape:changeset:list -o checkout --json >> $GITHUB_OUTPUT
-
-      - name: Output results
-        run: |
-          echo "${{ steps.changesetlist.outputs }}"
+          sf rapido:scrape:changeset:list -o checkout --json >> $GITHUB_STEP_SUMMARY
