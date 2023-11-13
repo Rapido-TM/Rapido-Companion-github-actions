@@ -69,7 +69,7 @@ jobs:
         shell: bash
         run: |
           echo "LST"
-          echo ${{ steps.changeset_list.outputs.lst }}"
+          echo "${{ steps.changeset_list.outputs.lst }}"
 
       - name: Annotate
         uses: dkhunt27/action-annotations@v1
