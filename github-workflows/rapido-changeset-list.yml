@@ -58,9 +58,10 @@ jobs:
           sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
           rm -f ./sfdxauthurl.txt
 
+          set -x
           mkdir -p manifest/changesets
           lst=$(sf rapido:scrape:changeset:list -o checkout --json)
-          echo $lst >> $GITHUB_STEP_SUMMARY
+          echo $lst
           echo "lst=$lst" >> $GITHUB_OUTPUT
 
       - name: Annotate
