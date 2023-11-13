@@ -1,4 +1,4 @@
-name: "Rapido Changeset List3"
+name: "Rapido Changeset List"
 
 on:
   workflow_dispatch:
@@ -23,6 +23,7 @@ on:
         description: "Salesforce DX CLI version, for using the CLI docker image (ex: salesforce/salesforcedx:7.190.2-slim)"
         #default: "salesforce/cli:2.17.5-slim"
         default: "rupertbarrow/rapido-sf-cli:latest"
+
 jobs:
   #########################################################################
   # Get list of changesets from Salesforce
@@ -38,8 +39,8 @@ jobs:
       folder-to-commit: .
     permissions:
       contents: write
-    #outputs:
-    #  changeset_list: ${{ steps.changeset_list.outputs.lst }}
+    outputs:
+      changeset_list: ${{ steps.changeset_list.outputs.lst }}
 
     steps:
       - name: Checkout
@@ -58,4 +59,12 @@ jobs:
           rm -f ./sfdxauthurl.txt
 
           mkdir -p manifest/changesets
-          sf rapido:scrape:changeset:list -o checkout --json >> $GITHUB_STEP_SUMMARY
+          lst=$(sf rapido:scrape:changeset:list -o checkout --json)
+          echo $lst >> $GITHUB_STEP_SUMMARY
+          echo"lst=$lst" >> $GITHUB_OUTPUT
+
+      - name: Annotate
+        uses: dkhunt27/action-annotations@v1
+        with:
+          type: notice
+          msg: ${{ steps.changeset_list.outputs.lst }}
