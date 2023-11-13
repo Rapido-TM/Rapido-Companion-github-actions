@@ -61,15 +61,14 @@ jobs:
           set -x
           mkdir -p manifest/changesets
           lst=$(sf rapido:scrape:changeset:list -o checkout --json)
-          echo "lst=" << "EOF" >> $GITHUB_OUTPUT
-          echo "$lst"          >> $GITHUB_OUTPUT
-          echo "EOF"           >> $GITHUB_OUTPUT
+          echo "lst=$lst" << "EOF" >> GITHUB_OUTPUT
+          echo "EOF"               >> $GITHUB_OUTPUT
 
       - name: debug lst
         shell: bash
         run: |
           echo "LST"
-          echo "${{ steps.changeset_list.outputs.lst }}"
+          echo ${{ steps.changeset_list.outputs.lst }}
 
       - name: Annotate
         uses: dkhunt27/action-annotations@v1
