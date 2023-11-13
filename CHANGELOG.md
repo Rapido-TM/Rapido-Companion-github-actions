@@ -1,3 +1,10 @@
+# [1.0.0-alpha.139](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.138...v1.0.0-alpha.139) (2023-11-13)
+
+
+### Bug Fixes
+
+* output annotation ([6153f83](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/6153f838c45a5182193ac7085eca54f4d6d59d20))
+
 # [1.0.0-alpha.138](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.137...v1.0.0-alpha.138) (2023-11-13)
 
 
