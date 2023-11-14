@@ -60,8 +60,7 @@ jobs:
 
           set -x
           mkdir -p manifest/changesets
-          echo "lst=$(sf rapido:scrape:changeset:list -o checkout --json)" <<EOF >> $GITHUB_OUTPUT
-          EOF
+          echo '$(sf rapido:scrape:changeset:list -o checkout --json)' >> $GITHUB_OUTPUT
 
       - name: debug lst
         shell: bash
