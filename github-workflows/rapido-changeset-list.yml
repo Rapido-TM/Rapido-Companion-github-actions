@@ -64,7 +64,7 @@ jobs:
           #lst=$(sf rapido:scrape:changeset:list -o checkout --json)
           #EOF
           cat <<-EOF >> $GITHUB_OUTPUT
-          $(sf rapido:scrape:changeset:list -o checkout --json)
+          "$(sf rapido:scrape:changeset:list -o checkout --json)"
           EOF
 
       - name: debug lst
