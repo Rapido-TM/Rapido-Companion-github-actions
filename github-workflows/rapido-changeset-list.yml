@@ -60,11 +60,6 @@ jobs:
 
           set -x
           mkdir -p manifest/changesets
-          sf rapido:scrape:changeset:list -o checkout --json > manifest/changesets/changeset-list.json
-          cat manifest/changesets/changeset-list.json
-
-          cat manifest/changesets/changeset-list.json <<-EOF >> $GITHUB_OUTPUT
-          EOF
 
       - name: debug lst
         shell: bash
@@ -76,4 +71,4 @@ jobs:
         uses: dkhunt27/action-annotations@v1
         with:
           type: notice
-          msg: ${{ steps.changeset_list.outputs.lst }}
+          msg: ${{ $(sf rapido:scrape:changeset:list -o checkout --json) }}
