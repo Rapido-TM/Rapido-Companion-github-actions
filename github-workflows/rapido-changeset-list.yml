@@ -60,15 +60,18 @@ jobs:
 
           set -x
           mkdir -p manifest/changesets
+          cat <<-EOF > $GITHUB_STEP_SUMMARY
           lst=$(sf rapido:scrape:changeset:list -o checkout --json)
-          echo $lst
-
-          #cat <<-EOF > $GITHUB_STEP_SUMMARY
-          #$lst
-          #EOF
-          cat <<-EOF >> $GITHUB_OUTPUT
-          $lst
           EOF
+          #cat <<-EOF >> $GITHUB_OUTPUT
+          #lst=$lst
+          #EOF
+
+      - name: debug lst
+        shell: bash
+        run: |
+          echo "LST"
+          echo ${{ steps.changeset_list.outputs.lst }}
 
       - name: Annotate
         uses: dkhunt27/action-annotations@v1
