@@ -63,7 +63,8 @@ jobs:
           sf rapido:scrape:changeset:list -o checkout --json > manifest/changesets/changeset-list.json
           cat manifest/changesets/changeset-list.json
 
-          cat manifest/changesets/changeset-list.json >> $GITHUB_OUTPUT
+          cat manifest/changesets/changeset-list.json <<-EOF >> $GITHUB_OUTPUT
+          EOF
 
       - name: debug lst
         shell: bash
