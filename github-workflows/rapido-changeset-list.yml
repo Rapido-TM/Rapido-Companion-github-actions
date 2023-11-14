@@ -58,12 +58,7 @@ jobs:
           sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
           rm -f ./sfdxauthurl.txt
 
-          set -x
-          mkdir -p manifest/changesets
-          sf rapido:scrape:changeset:list -o checkout --json > manifest/changesets/changeset-list.json
-          lst=$(cat manifest/changesets/changeset-list.json)
-
-          echo lst=$lst >> "$GITHUB_OUTPUT"
+          echo lst=$(sf rapido:scrape:changeset:list -o checkout --json) >> "$GITHUB_OUTPUT"
 
       - name: debug lst
         shell: bash
