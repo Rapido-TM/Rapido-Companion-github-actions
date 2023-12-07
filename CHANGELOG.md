@@ -1,3 +1,10 @@
+# [1.0.0-alpha.160](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.159...v1.0.0-alpha.160) (2023-12-07)
+
+
+### Bug Fixes
+
+* Removed file pattern for Github commit. ([32e62f6](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/32e62f6aab81cdec5acafa34f215121227edd447))
+
 # [1.0.0-alpha.159](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.158...v1.0.0-alpha.159) (2023-12-07)
 
 
