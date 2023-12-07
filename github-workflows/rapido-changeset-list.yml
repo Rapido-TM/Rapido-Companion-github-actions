@@ -66,6 +66,8 @@ jobs:
 
           # List changesets to file
           set -x
+          pwd
+          ls -al
           mkdir -p `dirname ${{ github.event.inputs.filename }}`
           echo ${{ steps.changeset_list.outputs.changesets }} > ${{ github.event.inputs.filename }}
           ls -al manifest
