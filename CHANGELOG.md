@@ -1,3 +1,10 @@
+# [1.0.0-alpha.166](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.165...v1.0.0-alpha.166) (2023-12-07)
+
+
+### Bug Fixes
+
+* CHange git safe-directory ([4f183fc](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/4f183fcf051ea9452ec1c9dc1bc4d72c2eb4eb8a))
+
 # [1.0.0-alpha.165](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.164...v1.0.0-alpha.165) (2023-12-07)
 
 
