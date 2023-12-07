@@ -1,3 +1,10 @@
+# [1.0.0-alpha.164](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.163...v1.0.0-alpha.164) (2023-12-07)
+
+
+### Bug Fixes
+
+* Added safe.directory for manifest ([cf42434](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/cf4243495f350e628f4d663c5d364865c019862c))
+
 # [1.0.0-alpha.163](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.162...v1.0.0-alpha.163) (2023-12-07)
 
 
