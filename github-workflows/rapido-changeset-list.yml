@@ -60,8 +60,10 @@ jobs:
           # Login to the org
           sf org login sfdx-url --set-default --alias checkout --sfdx-url-file <(echo ${{ github.event.inputs.salesforce_sfdx_auth_url }})
 
-          # List changesets to output and to file
+          # List changesets to output
           echo changesets=$(sf rapido:scrape:changeset:list -o checkout --json) >> "$GITHUB_OUTPUT"
+
+          # List changesets to file
           mkdir -p `dirname ${{ github.event.inputs.filename }}`
           echo ${{ steps.changeset_list.outputs.changesets }} > ${{ github.event.inputs.filename }}
 
