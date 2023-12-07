@@ -75,7 +75,7 @@ jobs:
           msg: ${{ steps.changeset_list.outputs.changesets }}
 
       - name: Commit changesets list to Github
-        uses: RupertBarrow/actions/action-commit
+        uses: RupertBarrow/actions/action-commit@main
         with:
           commit_message: ${{ github.event.inputs.commit_message }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
