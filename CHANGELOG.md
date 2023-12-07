@@ -1,3 +1,10 @@
+# [1.0.0-alpha.175](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.174...v1.0.0-alpha.175) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed output format in file ([0e0b980](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/0e0b98084b05b71674ae0fdf3e1f85e895a1e711))
+
 # [1.0.0-alpha.174](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.173...v1.0.0-alpha.174) (2023-12-07)
 
 
