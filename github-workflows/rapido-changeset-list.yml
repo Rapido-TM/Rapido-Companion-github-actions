@@ -6,18 +6,21 @@ on:
       salesforce_sfdx_auth_url:
         description: "Salesforce DX auth url for the sandbox org"
         required: true
-      salesforce_instance_url:
-        description: "Salesforce instance url where to look for changesets"
-        required: true
-      salesforce_username:
-        description: "Salesforce username, necessary to login with the sf cli plugin"
-        required: true
-        default: "barrow.rapido@flowbird.group.devrupert"
+      #salesforce_instance_url:
+      #  description: "Salesforce instance url where to look for changesets"
+      #  required: true
+      #salesforce_username:
+      #  description: "Salesforce username, necessary to login with the sf cli plugin"
+      #  required: true
+      #  default: "barrow.rapido@flowbird.group.devrupert"
       branch:
         description: "Branch on which to work"
         default: "main"
+      filename:
+        description: "Filename used to store the changesets list"
+        default: "manifests/changesets-outbound.json"
       commit_message:
-        description: "Commit message added when committing the package.xml"
+        description: "Commit message added when committing the changesets list file"
         default: "Created by Rapido Companion"
       sfdx-docker-image:
         description: "Salesforce DX CLI version, for using the CLI docker image (ex: salesforce/salesforcedx:7.190.2-slim)"
@@ -40,7 +43,7 @@ jobs:
     permissions:
       contents: write
     outputs:
-      changeset_list: ${{ steps.changeset_list.outputs.lst }}
+      changesets: ${{ steps.changeset_list.outputs.changesets }}
 
     steps:
       - name: Checkout
@@ -55,15 +58,21 @@ jobs:
           echo y | sf plugins:install rapido-sf-plugin
 
           # Login to the org
-          echo ${{ github.event.inputs.salesforce_sfdx_auth_url }} > ./sfdxauthurl.txt
-          sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
-          rm -f ./sfdxauthurl.txt
+          sf org login sfdx-url --set-default --alias checkout --sfdx-url-file <(echo ${{ github.event.inputs.salesforce_sfdx_auth_url }})
 
-          # List changesets
-          echo lst=$(sf rapido:scrape:changeset:list -o checkout --json) >> "$GITHUB_OUTPUT"
+          # List changesets to output and to file
+          echo changesets=$(sf rapido:scrape:changeset:list -o checkout --json) >> "$GITHUB_OUTPUT"
+          mkdir -p `dirname ${{ github.event.inputs.filename }}`
+          echo ${{ steps.changeset_list.outputs.changesets }} > ${{ github.event.inputs.filename }}
 
-      - name: Output an annotation
+      - name: Output changesets list to an annotation
         uses: dkhunt27/action-annotations@v1
         with:
           type: notice
-          msg: ${{ steps.changeset_list.outputs.lst }}
+          msg: ${{ steps.changeset_list.outputs.changesets }}
+
+      # Commit the changesets list file
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: ${{ github.event.inputs.commit_message }}
+          file_pattern: "${{ steps.changeset_list.outputs.changesets }}"
