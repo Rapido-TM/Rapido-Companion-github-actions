@@ -1,3 +1,10 @@
+# [1.0.0-alpha.169](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.168...v1.0.0-alpha.169) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed gti config ([6f71adf](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/6f71adf424c09ebca1e21ced04d28a64fb74af44))
+
 # [1.0.0-alpha.168](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.167...v1.0.0-alpha.168) (2023-12-07)
 
 
