@@ -53,6 +53,7 @@ jobs:
 
       - name: Get changeset list
         id: changeset_list
+        shell: bash
         run: |
           # Node and the sf cli are already installed in the Docker image container
           echo y | sf plugins:install rapido-sf-plugin
