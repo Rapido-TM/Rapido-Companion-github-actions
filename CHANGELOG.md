@@ -1,3 +1,10 @@
+# [1.0.0-alpha.162](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.161...v1.0.0-alpha.162) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed add anc commit by doing these operations manually ([69c7758](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/69c77582d7202c53ef44431fb3593ca516ef10c7))
+
 # [1.0.0-alpha.161](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.160...v1.0.0-alpha.161) (2023-12-07)
 
 
