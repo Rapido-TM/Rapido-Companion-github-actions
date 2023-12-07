@@ -78,4 +78,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: ${{ github.event.inputs.commit_message }}
-          file_pattern: "${{ steps.changeset_list.outputs.changesets }}"
+          file_pattern: "${{ github.event.inputs.filename }}"
