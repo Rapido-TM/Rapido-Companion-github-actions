@@ -1,3 +1,10 @@
+# [1.0.0-alpha.163](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.162...v1.0.0-alpha.163) (2023-12-07)
+
+
+### Bug Fixes
+
+* Debug ([70cc4d9](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/70cc4d94023b2d6cce2e13ddcdef82d003fa2b2c))
+
 # [1.0.0-alpha.162](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.161...v1.0.0-alpha.162) (2023-12-07)
 
 
