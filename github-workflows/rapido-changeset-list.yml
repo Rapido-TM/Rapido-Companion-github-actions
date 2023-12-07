@@ -65,21 +65,17 @@ jobs:
           echo changesets=$(sf rapido:scrape:changeset:list -o checkout --json) >> "$GITHUB_OUTPUT"
 
           # List changesets to file
-          set -x
-          pwd
-          ls -al
           mkdir -p `dirname ${{ github.event.inputs.filename }}`
           echo ${{ steps.changeset_list.outputs.changesets }} > ${{ github.event.inputs.filename }}
-
-          # Add and commit the changesets list file
-          git config --global --add safe.directory `pwd`
-          git config --local user.name  ${{github.actor}}
-          git config --local user.email ${{github.actor}}@users.noreply.github.com
-          git add "${{ github.event.inputs.filename }}"
-          git commit --allow-empty -m "${{ github.event.inputs.commit_message }}"
 
       - name: Output changesets list to an annotation
         uses: dkhunt27/action-annotations@v1
         with:
           type: notice
           msg: ${{ steps.changeset_list.outputs.changesets }}
+
+      - name: Commit changesets list to Github
+        uses: RupertBarrow/actions/action-commit
+        with:
+          commit_message: ${{ github.event.inputs.commit_message }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
