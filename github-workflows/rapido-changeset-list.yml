@@ -54,19 +54,15 @@ jobs:
           # Node and the sf cli are already installed in the Docker image container
           echo y | sf plugins:install rapido-sf-plugin
 
+          # Login to the org
           echo ${{ github.event.inputs.salesforce_sfdx_auth_url }} > ./sfdxauthurl.txt
           sf org login sfdx-url -f ./sfdxauthurl.txt --set-default --alias checkout
           rm -f ./sfdxauthurl.txt
 
+          # List changesets
           echo lst=$(sf rapido:scrape:changeset:list -o checkout --json) >> "$GITHUB_OUTPUT"
 
-      - name: debug lst
-        shell: bash
-        run: |
-          echo "LST"
-          echo ${{ steps.changeset_list.outputs.lst }}
-
-      - name: Annotate
+      - name: Output an annotation
         uses: dkhunt27/action-annotations@v1
         with:
           type: notice
