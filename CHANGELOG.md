@@ -1,3 +1,10 @@
+# [1.0.0-alpha.172](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.171...v1.0.0-alpha.172) (2023-12-07)
+
+
+### Features
+
+* Commit changesets list to Github. ([3620fff](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/3620fffb42ac63ff461de693b0cb02bed5b0f5bc))
+
 # [1.0.0-alpha.171](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.170...v1.0.0-alpha.171) (2023-12-07)
 
 
