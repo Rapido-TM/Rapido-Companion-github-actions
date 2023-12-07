@@ -18,7 +18,7 @@ on:
         default: "main"
       filename:
         description: "Filename used to store the changesets list"
-        default: "manifests/changesets-outbound.json"
+        default: "manifest/changesets-outbound.json"
       commit_message:
         description: "Commit message added when committing the changesets list file"
         default: "Created by Rapido Companion"
@@ -78,4 +78,3 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: ${{ github.event.inputs.commit_message }}
-          file_pattern: "${{ github.event.inputs.filename }}"
