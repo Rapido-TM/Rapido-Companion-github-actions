@@ -1,3 +1,10 @@
+# [1.0.0-alpha.165](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.164...v1.0.0-alpha.165) (2023-12-07)
+
+
+### Bug Fixes
+
+* Changed git add command ([7cb030a](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/7cb030a087ea9465354fa90a7bf317ba02018e7f))
+
 # [1.0.0-alpha.164](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.163...v1.0.0-alpha.164) (2023-12-07)
 
 
