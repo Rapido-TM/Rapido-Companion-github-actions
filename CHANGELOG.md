@@ -1,3 +1,15 @@
+# [1.0.0-alpha.158](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.157...v1.0.0-alpha.158) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed terminal used by the Github Action ([f753d22](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/f753d221a3000ed066c22692fac7190b8f3ee2ea))
+
+
+### Features
+
+* output the changesets list to a file ([be110e9](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/be110e9ec4497afb0c89db88b01743cd8e2171f9))
+
 # [1.0.0-alpha.157](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.156...v1.0.0-alpha.157) (2023-12-07)
 
 
