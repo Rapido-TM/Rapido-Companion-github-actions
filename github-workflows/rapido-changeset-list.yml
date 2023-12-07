@@ -64,7 +64,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p `dirname ${{ github.event.inputs.filename }}`
-          echo ${{ steps.changeset_list.outputs.changesets }} > ${{ github.event.inputs.filename }}
+          echo '${{ steps.changeset_list.outputs.changesets }}' > ${{ github.event.inputs.filename }}
 
       - name: Output changesets list to an annotation
         uses: dkhunt27/action-annotations@v1
