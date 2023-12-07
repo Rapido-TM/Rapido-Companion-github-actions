@@ -57,14 +57,12 @@ jobs:
         run: |
           # Node and the sf cli are already installed in the Docker image container
           echo y | sf plugins:install rapido-sf-plugin
-
-          # Login to the org
           sf org login sfdx-url --set-default --alias checkout --sfdx-url-file <(echo ${{ github.event.inputs.salesforce_sfdx_auth_url }})
-
-          # List changesets to output
           echo changesets=$(sf rapido:scrape:changeset:list -o checkout --json) >> "$GITHUB_OUTPUT"
 
-          # List changesets to file
+      - name: Output changesets list to a file
+        shell: bash
+        run: |
           mkdir -p `dirname ${{ github.event.inputs.filename }}`
           echo ${{ steps.changeset_list.outputs.changesets }} > ${{ github.event.inputs.filename }}
 
