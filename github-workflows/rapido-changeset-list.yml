@@ -65,8 +65,10 @@ jobs:
           echo changesets=$(sf rapido:scrape:changeset:list -o checkout --json) >> "$GITHUB_OUTPUT"
 
           # List changesets to file
+          set -x
           mkdir -p `dirname ${{ github.event.inputs.filename }}`
           echo ${{ steps.changeset_list.outputs.changesets }} > ${{ github.event.inputs.filename }}
+          ls -al manifest
 
           # Add and commit the changesets list file
           git config --global user.email "${{github.actor}}"
