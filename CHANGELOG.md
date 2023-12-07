@@ -1,3 +1,10 @@
+# [1.0.0-alpha.161](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.160...v1.0.0-alpha.161) (2023-12-07)
+
+
+### Bug Fixes
+
+* Using a different Github action to commit ([bc0eb7b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/bc0eb7b71d5f3d48a56fd9197d1e7a0e4bb883e9))
+
 # [1.0.0-alpha.160](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.159...v1.0.0-alpha.160) (2023-12-07)
 
 
