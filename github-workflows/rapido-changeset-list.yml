@@ -72,11 +72,12 @@ jobs:
           echo ${{ steps.changeset_list.outputs.changesets }} > ${{ github.event.inputs.filename }}
 
           # Add and commit the changesets list file
-          git config user.name  ${{github.actor}}
-          git config user.email ${{github.actor}}@users.noreply.github.com
+          git config --global --add safe.directory `pwd`
+          git config --local user.name  ${{github.actor}}
+          git config --local user.email ${{github.actor}}@users.noreply.github.com
           git config --add safe.directory .
-          git add .
-          git commit -m "${{ github.event.inputs.commit_message }}"
+          git add "${{ github.event.inputs.filename }}"
+          git commit --allow-empty -m "${{ github.event.inputs.commit_message }}"
 
       - name: Output changesets list to an annotation
         uses: dkhunt27/action-annotations@v1
