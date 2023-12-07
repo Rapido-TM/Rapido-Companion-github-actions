@@ -1,3 +1,10 @@
+# [1.0.0-alpha.159](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.158...v1.0.0-alpha.159) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed filename. ([9b3999d](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/9b3999dd2019a45e6b738118feec05e95ca1c495))
+
 # [1.0.0-alpha.158](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.157...v1.0.0-alpha.158) (2023-12-07)
 
 
