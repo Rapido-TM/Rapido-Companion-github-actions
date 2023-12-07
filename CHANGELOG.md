@@ -1,3 +1,11 @@
+# [1.0.0-alpha.157](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.156...v1.0.0-alpha.157) (2023-12-07)
+
+
+### Features
+
+* output the changesets list to a file ([00651d9](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/00651d914a11b441a4dcd8fa58e099bd84aff9cb))
+* output the changesets list to a file ([f6fd3b9](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/f6fd3b99fc0fba5587c3bc9a26b04a97d6a4ced0))
+
 # [1.0.0-alpha.156](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.155...v1.0.0-alpha.156) (2023-11-14)
 
 
