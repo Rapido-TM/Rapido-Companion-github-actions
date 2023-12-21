@@ -1,12 +1,18 @@
-name: "Rapido Changeset Deploy"
+name: "Rapido Deploy"
 # Deploy a package.xml from a source org to a target org
 
 on:
   workflow_dispatch:
     inputs:
-      data:
-        description: "Table data, to produce contents of package.xml as well as pre- and post-destructive changes"
+      packageData:
+        description: "Table data, to produce contents of package.xml"
         required: true
+      destructivePreData:
+        description: "Table data, to produce contents of pre-destructive changes"
+        required: false
+      destructivePostData:
+        description: "Table data, to produce contents of post-destructive changes"
+        required: false
       branch:
         description: "Branch on which to work"
         default: "main"
@@ -54,35 +60,29 @@ jobs:
 
       - name: DEBUG
         run: |
-          echo "DEBUG: data: ${{ github.event.inputs.data }}"
-          echo "DEBUG: branch: ${{ github.event.inputs.branch }}"
-          echo "DEBUG: commit_message: ${{ github.event.inputs.commit_message }}"
-          echo "DEBUG: sfdx-docker-image: ${{ github.event.inputs.sfdx-docker-image }}"
-          echo "DEBUG: path_package_xml: ${{ github.event.inputs.path_package_xml }}"
-          echo "DEBUG: path_package_xml_destructive_pre: ${{ github.event.inputs.path_package_xml_destructive_pre }}"
-          echo "DEBUG: path_package_xml_destructive_post: ${{ github.event.inputs.path_package_xml_destructive_post }}"
-          echo "DEBUG: salesforce_sfdx_auth_url_source: ${{ github.event.inputs.salesforce_sfdx_auth_url_source }}"
-          echo "DEBUG: salesforce_sfdx_auth_url_target: ${{ github.event.inputs.salesforce_sfdx_auth_url_target }}"
+          echo "DEBUG: data.packageData: ${{ github.event.inputs.packageData }}"
+          echo "DEBUG: data.destructivePreData: ${{ github.event.inputs.destructivePreData }}"
+          echo "DEBUG: data.destructivePostData: ${{ github.event.inputs.destructivePostData }}"
 
       - name: Generate package.xml
-        if: "${{ github.event.inputs.data.packageData }}"
+        if: ${{ github.event.inputs.packageData }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ github.event.inputs.data.packageData }}
+          contents: ${{ github.event.inputs.packageData }}
           path: "${{ github.event.inputs.path_package_xml }}"
 
       - name: Generate package.xml for destructive-changes-pre
-        if: "${{ github.event.inputs.data.destructivePreData }}"
+        if: ${{ github.event.inputs.destructivePreData }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ github.event.inputs.data.destructivePreData }}
+          contents: ${{ github.event.inputs.destructivePreData }}
           path: "${{ github.event.inputs.path_package_xml_destructive_pre }}"
 
       - name: Generate package.xml for destructive-changes-post
-        if: "${{ github.event.inputs.data.destructivePostData }}"
+        if: ${{ github.event.inputs.destructivePostData }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ github.event.inputs.data.destructivePostData }}
+          contents: ${{ github.event.inputs.destructivePostData }}
           path: "${{ github.event.inputs.path_package_xml_destructive_post }}"
 
       - name: Retrieve metadata from Salesforce (source org)
