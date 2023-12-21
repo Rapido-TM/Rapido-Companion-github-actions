@@ -1,3 +1,10 @@
+# [1.0.0-alpha.183](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.182...v1.0.0-alpha.183) (2023-12-21)
+
+
+### Features
+
+* renamed rapido-changeset.yml to rapido-deploy.yml and split input data structure ([057ea50](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/057ea508194f9b3cf4fc7c4b22cbdb9e7c3f5df9))
+
 # [1.0.0-alpha.182](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.181...v1.0.0-alpha.182) (2023-12-21)
 
 
