@@ -1,4 +1,5 @@
-name: "Rapido Changeset"
+name: "Rapido Changeset Deploy"
+# Deploy a package.xml from a source org to a target org
 
 on:
   workflow_dispatch:
@@ -29,7 +30,6 @@ on:
         description: "Salesforce DX auth url for target org"
         required: true
 
-
 jobs:
   #########################################################################
   # Retrieve package from Salesforce (source org)
@@ -51,6 +51,18 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.event.inputs.branch }}
+
+      - name: DEBUG
+        run: |
+          echo "DEBUG: data: ${{ github.event.inputs.data }}"
+          echo "DEBUG: branch: ${{ github.event.inputs.branch }}"
+          echo "DEBUG: commit_message: ${{ github.event.inputs.commit_message }}"
+          echo "DEBUG: sfdx-docker-image: ${{ github.event.inputs.sfdx-docker-image }}"
+          echo "DEBUG: path_package_xml: ${{ github.event.inputs.path_package_xml }}"
+          echo "DEBUG: path_package_xml_destructive_pre: ${{ github.event.inputs.path_package_xml_destructive_pre }}"
+          echo "DEBUG: path_package_xml_destructive_post: ${{ github.event.inputs.path_package_xml_destructive_post }}"
+          echo "DEBUG: salesforce_sfdx_auth_url_source: ${{ github.event.inputs.salesforce_sfdx_auth_url_source }}"
+          echo "DEBUG: salesforce_sfdx_auth_url_target: ${{ github.event.inputs.salesforce_sfdx_auth_url_target }}"
 
       - name: Generate package.xml
         if: "${{ github.event.inputs.data.packageData }}"
