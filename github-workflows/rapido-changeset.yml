@@ -43,7 +43,7 @@ jobs:
     name: "Changeset : generate package.xml manifests, retrieve, commit, deploy"
     env:
       folder-to-commit: .
-      input_data: ${{ to_JSON(github.event.inputs.data) }}
+      input_data: ${{ toJSON(github.event.inputs.data) }}
       packageData: ${{ input_data.packageData }}
     permissions:
       contents: write
