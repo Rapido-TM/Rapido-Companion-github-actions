@@ -4,7 +4,7 @@ name: "Rapido Deploy"
 on:
   workflow_dispatch:
     inputs:
-      packageData:
+      data:
         description: "Table data, to produce contents of package.xml, including pre- and post-destructive changes"
         required: true
       branch:
