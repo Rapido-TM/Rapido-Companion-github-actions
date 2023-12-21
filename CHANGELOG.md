@@ -1,3 +1,10 @@
+# [1.0.0-alpha.186](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.185...v1.0.0-alpha.186) (2023-12-21)
+
+
+### Bug Fixes
+
+* reverted back to single data input parameter ([5735d65](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/5735d658e01ea61395cf4c542d9763a92487df63))
+
 # [1.0.0-alpha.185](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.184...v1.0.0-alpha.185) (2023-12-21)
 
 
