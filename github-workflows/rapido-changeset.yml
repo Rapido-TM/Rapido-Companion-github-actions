@@ -44,7 +44,6 @@ jobs:
     env:
       folder-to-commit: .
       input_data: ${{ toJSON(github.event.inputs.data) }}
-      packageData: ${{ input_data.packageData }}
     permissions:
       contents: write
 
@@ -57,15 +56,14 @@ jobs:
       - name: DEBUG
         run: |
           echo "DEBUG: data: ${{ github.event.inputs.data }}"
-          echo "DEBUG: data.packageData1: ${{ input_data.packageData }}"
-          echo "DEBUG: data.packageData2: ${{ packageData }}"
+          echo "DEBUG: data.packageData: ${{ input_data.packageData }}"
           echo "DEBUG: data.destructivePreData: ${{ input_data.destructivePreData }}"
           echo "DEBUG: data.destructivePostData: ${{ input_data.destructivePostData }}"
 
       - name: DEBUG2
-        if: ${{ packageData }}
+        if: ${{ input_data.packageData }}
         run: |
-          echo "DEBUG2: data.packageData: ${{ github.event.inputs.data.packageData }}"
+          echo "DEBUG2: data.packageData: ${{ input_data.packageData }}"
 
       - name: Generate package.xml
         if: ${{ github.event.inputs.data.packageData }}
