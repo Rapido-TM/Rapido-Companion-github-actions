@@ -54,7 +54,7 @@ jobs:
 
       - name: DEBUG
         run: |
-          echo ${{ fromJSON(github.event.inputs.data) }}
+          echo ${{ github.event.inputs.data }}
           echo "DEBUG: data.packageData: ${{ fromJSON(fromJSON(github.event.inputs.data).packageData) }}"
           echo "DEBUG: data.destructivePreData: ${{ fromJSON(fromJSON(github.event.inputs.data).destructivePreData) }}"
           echo "DEBUG: data.destructivePostData: ${{ fromJSON(fromJSON(github.event.inputs.data).destructivePostData) }}"
