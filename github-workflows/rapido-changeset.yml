@@ -55,13 +55,13 @@ jobs:
 
       - name: DEBUG
         run: |
-          echo "DEBUG: data: ${{ github.event.inputs.data }}"
-          echo "DEBUG: data.packageData: ${{ input_data.packageData }}"
-          echo "DEBUG: data.destructivePreData: ${{ input_data.destructivePreData }}"
-          echo "DEBUG: data.destructivePostData: ${{ input_data.destructivePostData }}"
+          echo "DEBUG: data: $input_data"
+          echo "DEBUG: data.packageData: ${{ toJSON(github.event.inputs.data).packageData }}"
+          echo "DEBUG: data.destructivePreData: ${{ toJSON(github.event.inputs.data).destructivePreData }}"
+          echo "DEBUG: data.destructivePostData: ${{ toJSON(github.event.inputs.data).destructivePostData }}"
 
       - name: DEBUG2
-        if: ${{ input_data.packageData }}
+        if: $input_data.packageData
         run: |
           echo "DEBUG2: data.packageData: ${{ input_data.packageData }}"
 
