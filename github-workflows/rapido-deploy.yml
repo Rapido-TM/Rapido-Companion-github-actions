@@ -193,8 +193,9 @@ jobs:
             return options
 
       - name: Deploy metadata to Salesforce (target org)
+        id: deploy
         uses: RupertBarrow/actions/action-command@v3
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url_target }}
           #command: "sfdx force:source:deploy ${{ steps.deployOptions.outputs.result }}"
-          command: "sf project deploy start ${{ steps.deployOptions.outputs.result }}"
+          command: "sf project deploy start ${{ steps.deployOptions.outputs.result }} --json"
