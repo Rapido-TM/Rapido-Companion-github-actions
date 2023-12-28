@@ -1,3 +1,10 @@
+# [1.0.0-alpha.224](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.223...v1.0.0-alpha.224) (2023-12-28)
+
+
+### Bug Fixes
+
+* Changed deploy command output to --json ([b5812f3](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/b5812f3f8f8053a980b96fd97794576d740468a4))
+
 # [1.0.0-alpha.223](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.222...v1.0.0-alpha.223) (2023-12-28)
 
 
