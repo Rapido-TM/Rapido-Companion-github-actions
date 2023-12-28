@@ -83,7 +83,7 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
 
       - name: DEBUG
-        if: ${{ true }}
+        if: ${{ false }}
         uses: actions/github-script@v7
         with:
           script: |
@@ -173,11 +173,11 @@ jobs:
       # Retrieve and deploy
 
       - name: Retrieve metadata from Salesforce (source org)
-        uses: RupertBarrow/actions/action-command@v3
+        uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url_source }}
           #command: "sfdx force:source:retrieve -x ${{ steps.path_package_xml.outputs.result }}"
-          command: "sf project retrieve start --ignore-conflicts --manifest=${{ steps.path_package_xml.outputs.result }}"
+          command: "sf project retrieve start --ignore-conflicts --json --manifest=${{ steps.path_package_xml.outputs.result }}"
 
       - name: Command options for deploy
         id: deployOptions
@@ -194,8 +194,15 @@ jobs:
 
       - name: Deploy metadata to Salesforce (target org)
         id: deploy
-        uses: RupertBarrow/actions/action-command@v3
+        uses: RupertBarrow/actions/action-command@feature/54-upgrade-action-command-to-work-with-sf-cli
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url_target }}
           #command: "sfdx force:source:deploy ${{ steps.deployOptions.outputs.result }}"
-          command: "sf project deploy start ${{ steps.deployOptions.outputs.result }} --json"
+          command: "sf project deploy start --json ${{ steps.deployOptions.outputs.result }}"
+
+      - name: Output command result to an annotation
+        if: ${{ always() }}
+        uses: dkhunt27/action-annotations@v1
+        with:
+          type: notice
+          msg: ${{ steps.deploy.outputs.result }}
