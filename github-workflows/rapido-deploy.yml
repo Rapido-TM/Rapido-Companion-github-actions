@@ -34,9 +34,9 @@ on:
 
       # options used for "sfdx force:source:deploy". Example :
       # {
-      #   path_package_xml:                  "manifest/package.xml",
-      #   path_package_xml_destructive_pre:  "manifest/destructiveChangesPre.xml",
-      #   path_package_xml_destructive_post: "manifest/destructiveChangesPost.xml",
+      #   path_package_xml:                  "manifest/changeset/package.xml",
+      #   path_package_xml_destructive_pre:  "manifest/changeset/destructiveChangesPre.xml",
+      #   path_package_xml_destructive_post: "manifest/changeset/destructiveChangesPost.xml",
       #
       #   otherOptions: "--ignorewarnings"
       # }
@@ -83,7 +83,7 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
 
       - name: DEBUG
-        if: ${{ false }}
+        if: ${{ true }}
         uses: actions/github-script@v7
         with:
           script: |
@@ -92,6 +92,12 @@ jobs:
             console.log("packageData", data.packageData)
             console.log("destructivePreData", data.destructivePreData)
             console.log("destructivePostData", data.destructivePostData)
+
+            const options = JSON.parse(context.payload.inputs.options)
+            console.log("options", options)
+            console.log("path_package_xml", options.path_package_xml)
+            console.log("path_package_xml_destructive_pre", options.path_package_xml_destructive_pre)
+            console.log("path_package_xml_destructive_post", options.path_package_xml_destructive_post)
 
       #########################################################################
       # Read data and options attributes from inputs (I cannot get fromJSON() to work as expected)
@@ -179,10 +185,12 @@ jobs:
           result-encoding: string
           script: |
             let options = ""
-            options += " -x '${{ steps.path_package_xml.outputs.result }}'"
-            options += "${{ steps.path_package_xml_pre.outputs.result  }}" ? " --predestructivechanges='${{  steps.path_package_xml_pre.outputs.result  }}'" : ""
-            options += "${{ steps.path_package_xml_post.outputs.result }}" ? " --postdestructivechanges='${{ steps.path_package_xml_post.outputs.result }}'" : ""
+            options += " --manifest='${{ steps.path_package_xml.outputs.result }}'"
+            options += "${{ steps.path_package_xml_destructive_pre.outputs.result  }}" ? " --predestructivechanges='${{  steps.path_package_xml_destructive_pre.outputs.result  }}'" : ""
+            options += "${{ steps.path_package_xml_destructive_post.outputs.result }}" ? " --postdestructivechanges='${{ steps.path_package_xml_destructive_post.outputs.result }}'" : ""
             options += " ${{ github.event.inputs.options.otherOptions }}"
+
+            console.log("options", options)
             return options
 
       - name: Deploy metadata to Salesforce (target org)
