@@ -176,7 +176,8 @@ jobs:
         uses: RupertBarrow/actions/action-command@v3
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url_source }}
-          command: "sfdx force:source:retrieve -x ${{ steps.path_package_xml.outputs.result }}"
+          #command: "sfdx force:source:retrieve -x ${{ steps.path_package_xml.outputs.result }}"
+          command: "sf project retrieve start --manifest=${{ steps.path_package_xml.outputs.result }}"
 
       - name: Command options for deploy
         id: deployOptions
@@ -185,25 +186,15 @@ jobs:
           result-encoding: string
           script: |
             let options = ""
-
             options += " --manifest='${{ steps.path_package_xml.outputs.result }}'"
-            console.log("options", options)
-
-            console.log("destructivePreData", '${{ steps.destructivePreData.outputs.result }}')
-            options += '${{ steps.destructivePreData.outputs.result  }}' !== '' ? " --predestructivechanges='${{  steps.path_package_xml_destructive_pre.outputs.result  }}'" : ""
-            console.log("options", options)
-
-            console.log("destructivePostData", '${{ steps.destructivePostData.outputs.result }}')
-            options += '${{ steps.destructivePostData.outputs.result }}' !== '' ? " --postdestructivechanges='${{ steps.path_package_xml_destructive_post.outputs.result }}'" : ""
-            console.log("options", options)
-
+            options += '${{ steps.destructivePreData.outputs.result  }}' !== '' ? " --pre-destructive-changes='${{  steps.path_package_xml_destructive_pre.outputs.result  }}'" : ""
+            options += '${{ steps.destructivePostData.outputs.result }}' !== '' ? " --post-destructive-changes='${{ steps.path_package_xml_destructive_post.outputs.result }}'" : ""
             options += " ${{ github.event.inputs.options.otherOptions }}"
-            console.log("options", options)
-
             return options
 
       - name: Deploy metadata to Salesforce (target org)
         uses: RupertBarrow/actions/action-command@v3
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url_target }}
-          command: "sfdx force:source:deploy ${{ steps.deployOptions.outputs.result }}"
+          #command: "sfdx force:source:deploy ${{ steps.deployOptions.outputs.result }}"
+          command: "sf project deploy start ${{ steps.deployOptions.outputs.result }}"
