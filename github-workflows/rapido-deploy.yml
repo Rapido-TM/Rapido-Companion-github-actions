@@ -62,37 +62,43 @@ jobs:
             console.log("destructivePreData", data.destructivePreData)
             console.log("destructivePostData", data.destructivePostData)
 
-      - name: Get packageData
+      - name: Get data.packageData
         id: packageData
         uses: actions/github-script@v7
         with:
           result-encoding: json
           script: return JSON.parse(context.payload.inputs.data).packageData
-      - name: Get destructivePreData
+      - name: Get data.destructivePreData
         id: destructivePreData
         uses: actions/github-script@v7
         with:
           result-encoding: json
           script: return JSON.parse(context.payload.inputs.data).destructivePreData
+      - name: Get data.destructivePostData
+        id: destructivePostData
+        uses: actions/github-script@v7
+        with:
+          result-encoding: json
+          script: return JSON.parse(context.payload.inputs.data).destructivePostData
 
       - name: Generate package.xml
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ fromJSON(github.event.inputs.data).packageData }}
+          contents: ${{ steps.packageData.outputs.result }}
           path: "${{ github.event.inputs.path_package_xml }}"
 
       - name: Generate package.xml for destructive-changes-pre
-        if: ${{ fromJSON(github.event.inputs.data).destructivePreData }}
+        if: ${{ steps.destructivePreData.outputs.result }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ fromJSON(github.event.inputs.data).destructivePreData }}
+          contents: ${{ steps.destructivePreData.outputs.result }}
           path: "${{ github.event.inputs.path_package_xml_destructive_pre }}"
 
       - name: Generate package.xml for destructive-changes-post
-        if: ${{ fromJSON(github.event.inputs.data).destructivePostData }}
+        if: ${{ steps.destructivePostData.outputs.result }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ fromJSON(github.event.inputs.data).destructivePostData }}
+          contents: ${{ steps.destructivePostData.outputs.result }}
           path: "${{ github.event.inputs.path_package_xml_destructive_post }}"
 
       - name: Retrieve metadata from Salesforce (source org)
