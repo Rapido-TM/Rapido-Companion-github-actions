@@ -63,7 +63,7 @@ jobs:
             console.log("packageData = ", JSON.parse(context.payload.inputs.data).packageData)
             const res = JSON.stringify(JSON.parse(context.payload.inputs.data).packageData)
             console.log("res", res)
-            console.log("res2", JSON.stringify(fromJSON(github.event.inputs.data).packageData) }})
+            console.log("res2", JSON.stringify(${{ fromJSON(github.event.inputs.data).packageData }})
             return
 
       - name: Generate package.xml
