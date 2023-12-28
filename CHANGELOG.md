@@ -1,3 +1,10 @@
+# [1.0.0-alpha.220](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.219...v1.0.0-alpha.220) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([6621806](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/66218065e8d5359d7fa4efa9e0fe8176335ec9ee))
+
 # [1.0.0-alpha.219](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.218...v1.0.0-alpha.219) (2023-12-28)
 
 
