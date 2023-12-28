@@ -58,10 +58,10 @@ jobs:
         with:
           result-encoding: string
           script: |
-            const data = ${{ fromJSON(github.event.inputs.data) }}
-            console.log("data = ", data, data.packageData)
+            console.log("data = ", github.event.inputs.data)
+            console.log("packageData = ", github.event.inputs.data.packageData)
 
-            return data.packageData
+            return github.event.inputs.data.packageData
 
       - name: Generate package.xml
         if: ${{ fromJSON(steps.packageData.outputs.result) }}
