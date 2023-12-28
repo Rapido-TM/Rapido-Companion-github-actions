@@ -1,3 +1,10 @@
+# [1.0.0-alpha.225](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.224...v1.0.0-alpha.225) (2023-12-28)
+
+
+### Bug Fixes
+
+* use new version of GHA to run sf command ([486f6d5](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/486f6d535e87e01fdebfa0620a1a7c38a43a8d10))
+
 # [1.0.0-alpha.224](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.223...v1.0.0-alpha.224) (2023-12-28)
 
 
