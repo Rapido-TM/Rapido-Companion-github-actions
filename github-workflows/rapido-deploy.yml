@@ -188,9 +188,9 @@ jobs:
 
             options += " --manifest='${{ steps.path_package_xml.outputs.result }}'"
             console.log("options", options)
-            options += (${{ steps.destructivePreData.outputs.result  }}!==undefined) ? " --predestructivechanges='${{  steps.path_package_xml_destructive_pre.outputs.result  }}'" : ""
+            options += "${{ steps.destructivePreData.outputs.result  }}" !== "undefined") ? " --predestructivechanges='${{  steps.path_package_xml_destructive_pre.outputs.result  }}'" : ""
             console.log("options", options)
-            options += (${{ steps.destructivePostData.outputs.result }}!==undefined) ? " --postdestructivechanges='${{ steps.path_package_xml_destructive_post.outputs.result }}'" : ""
+            options += "${{ steps.destructivePostData.outputs.result }}" !== "undefined") ? " --postdestructivechanges='${{ steps.path_package_xml_destructive_post.outputs.result }}'" : ""
             console.log("options", options)
             options += " ${{ github.event.inputs.options.otherOptions }}"
             console.log("options", options)
