@@ -78,21 +78,21 @@ jobs:
       - name: Generate package.xml
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ toJSON(github.event.inputs.data).packageData }}
+          contents: ${{ fromJSON(github.event.inputs.data).packageData }}
           path: "${{ github.event.inputs.path_package_xml }}"
 
       - name: Generate package.xml for destructive-changes-pre
-        if: ${{ toJSON(github.event.inputs.data).destructivePreData }}
+        if: ${{ fromJSON(github.event.inputs.data).destructivePreData }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ toJSON(github.event.inputs.data).destructivePreData }}
+          contents: ${{ fromJSON(github.event.inputs.data).destructivePreData }}
           path: "${{ github.event.inputs.path_package_xml_destructive_pre }}"
 
       - name: Generate package.xml for destructive-changes-post
-        if: ${{ toJSON(github.event.inputs.data).destructivePostData }}
+        if: ${{ fromJSON(github.event.inputs.data).destructivePostData }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
-          contents: ${{ toJSON(github.event.inputs.data).destructivePostData }}
+          contents: ${{ fromJSON(github.event.inputs.data).destructivePostData }}
           path: "${{ github.event.inputs.path_package_xml_destructive_post }}"
 
       - name: Retrieve metadata from Salesforce (source org)
