@@ -56,16 +56,15 @@ jobs:
         uses: actions/github-script@v7
         id: packageData
         with:
-          result-encoding: string
           script: |
             console.log("context = ", context)
-            console.log("data = ", context.event.inputs.data)
-            console.log("packageData = ", context.event.inputs.data.packageData)
+            console.log("data = ", JSON.parse(context.payload.inputs.data))
+            console.log("packageData = ", JSON.parse(context.payload.inputs.data).packageData)
 
-            return github.event.inputs.data.packageData
+            return JSON.parse(JSON.parse(context.payload.inputs.data).packageData)
 
       - name: Generate package.xml
-        if: ${{ fromJSON(steps.packageData.outputs.result) }}
+        if: ${{ steps.packageData.outputs.result }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ fromJSON(steps.packageData.outputs.result) }}
