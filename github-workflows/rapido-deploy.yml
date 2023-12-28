@@ -56,11 +56,11 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-          const data = JSON.parse(context.payload.inputs.data)
-          console.log("data", JSON.parse(data))
-          console.log("packageData", data.packageData)
-          console.log("destructivePreData", data.destructivePreData)
-          console.log("destructivePostData", data.destructivePostData)
+            const data = JSON.parse(context.payload.inputs.data)
+            console.log("data", JSON.parse(data))
+            console.log("packageData", data.packageData)
+            console.log("destructivePreData", data.destructivePreData)
+            console.log("destructivePostData", data.destructivePostData)
 
       - name: Get packageData
         id: packageData
