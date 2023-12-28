@@ -186,8 +186,8 @@ jobs:
           script: |
             let options = ""
             options += " --manifest='${{ steps.path_package_xml.outputs.result }}'"
-            options += "${{ steps.path_package_xml_destructive_pre.outputs.result  }}" ? " --predestructivechanges='${{  steps.path_package_xml_destructive_pre.outputs.result  }}'" : ""
-            options += "${{ steps.path_package_xml_destructive_post.outputs.result }}" ? " --postdestructivechanges='${{ steps.path_package_xml_destructive_post.outputs.result }}'" : ""
+            options += ${{ steps.destructivePreData.outputs.result  }} ? " --predestructivechanges='${{  steps.path_package_xml_destructive_pre.outputs.result  }}'" : ""
+            options += ${{ steps.destructivePostData.outputs.result }} ? " --postdestructivechanges='${{ steps.path_package_xml_destructive_post.outputs.result }}'" : ""
             options += " ${{ github.event.inputs.options.otherOptions }}"
 
             console.log("options", options)
