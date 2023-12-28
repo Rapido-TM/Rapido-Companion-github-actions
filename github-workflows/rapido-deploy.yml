@@ -4,9 +4,47 @@ name: "Rapido Deploy"
 on:
   workflow_dispatch:
     inputs:
+      # data used to populate the package, destructivePre and destructivePost XML files. Example :
+      # {
+      #   packageData: [
+      #     ApexClass: [
+      #       { fullName: "MyClass", type: "ApexClass" }
+      #       { fullName: "Other",   type: "ApexClass" }
+      #     ],
+      #     CustomObject: [
+      #       { fullName: "MyObject__c", type: "CustomObject" }
+      #     ]
+      #   ],
+      #
+      #   destructivePreData: [
+      #     ApexClass: [
+      #       { fullName: "ObsoleteClass", type: "ApexClass" }
+      #     ]
+      #   ],
+      #
+      #   destructivePostData: [
+      #     CustomField: [
+      #       { fullName: "MyObject__c.MyObsoleteField__c", type: "CustomField" }
+      #     ]
+      #   ]
+      # }
       data:
-        description: "Table data, to produce contents of package.xml, including pre- and post-destructive changes"
+        description: "Data used to produce contents of package.xml, including pre- and post-destructive changes (JSON)"
         required: true
+
+      # options used for "sfdx force:source:deploy". Example :
+      # {
+      #   path_package_xml:                  "manifest/package.xml",
+      #   path_package_xml_destructive_pre:  "manifest/destructiveChangesPre.xml",
+      #   path_package_xml_destructive_post: "manifest/destructiveChangesPost.xml",
+      #
+      #   otherOptions: "--ignorewarnings"
+      # }
+      options:
+        description: "Options passed to the deploy command (JSON)"
+        required: true
+        default: {}
+
       branch:
         description: "Branch on which to work"
         default: "main"
@@ -16,13 +54,6 @@ on:
       sfdx-docker-image:
         description: "Salesforce DX CLI version, for using the CLI docker image (ex: salesforce/salesforcedx:7.190.2-slim)"
         default: "salesforce/salesforcedx:7.207.5-slim"
-      path_package_xml:
-        description: "Path to the package.xml file"
-        required: true
-      path_package_xml_destructive_pre:
-        description: "Path to the package.xml file for destructive changes pre deploy"
-      path_package_xml_destructive_post:
-        description: "Path to the package.xml file for destructive changes post deploy"
       salesforce_sfdx_auth_url_source:
         description: "Salesforce DX auth url for source org"
         required: true
@@ -37,10 +68,10 @@ jobs:
   # deploy to Salesforce (target org)
   #
 
-  rapido_changeset:
+  rapido_deploy:
     runs-on: ubuntu-latest
     container: ${{ inputs.sfdx-docker-image }}
-    name: "Changeset : generate package.xml manifests, retrieve, commit, deploy"
+    name: "Deploy : generate package.xml manifests, retrieve, commit, deploy"
     env:
       folder-to-commit: .
     permissions:
@@ -53,6 +84,7 @@ jobs:
           ref: ${{ github.event.inputs.branch }}
 
       - name: DEBUG
+        if: ${{ false }}
         uses: actions/github-script@v7
         with:
           script: |
@@ -61,6 +93,9 @@ jobs:
             console.log("packageData", data.packageData)
             console.log("destructivePreData", data.destructivePreData)
             console.log("destructivePostData", data.destructivePostData)
+
+      #########################################################################
+      # Read data attributes from inputs (I cannot get fromJSON() to work as expected)
 
       - name: Get data.packageData
         id: packageData
@@ -81,31 +116,28 @@ jobs:
           result-encoding: json
           script: return JSON.parse(context.payload.inputs.data).destructivePostData
 
+      #########################################################################
+      # Generate the package XML files and commit them
+
       - name: Generate package.xml
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ steps.packageData.outputs.result }}
-          path: "${{ github.event.inputs.path_package_xml }}"
+          path: "${{ github.event.inputs.options.path_package_xml }}"
 
-      - name: Generate package.xml for destructive-changes-pre
+      - name: Generate package XML for destructive-changes-pre
         if: ${{ steps.destructivePreData.outputs.result }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ steps.destructivePreData.outputs.result }}
-          path: "${{ github.event.inputs.path_package_xml_destructive_pre }}"
+          path: "${{ github.event.inputs.options.path_package_xml_destructive_pre }}"
 
-      - name: Generate package.xml for destructive-changes-post
+      - name: Generate package XML for destructive-changes-post
         if: ${{ steps.destructivePostData.outputs.result }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ steps.destructivePostData.outputs.result }}
-          path: "${{ github.event.inputs.path_package_xml_destructive_post }}"
-
-      - name: Retrieve metadata from Salesforce (source org)
-        uses: RupertBarrow/actions/action-command@v3
-        with:
-          salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url_source }}
-          command: "sfdx force:source:retrieve -x ${{ github.event.inputs.path_package_xml }}"
+          path: "${{ github.event.inputs.options.path_package_xml_destructive_post }}"
 
       - name: Commit to Github
         uses: RupertBarrow/actions/action-commit@v3
@@ -113,19 +145,26 @@ jobs:
           commit_message: ${{ github.event.inputs.commit_message }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+      #########################################################################
+      # Retrieve and deploy
+
+      - name: Retrieve metadata from Salesforce (source org)
+        uses: RupertBarrow/actions/action-command@v3
+        with:
+          salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url_source }}
+          command: "sfdx force:source:retrieve -x ${{ github.event.inputs.options.path_package_xml }}"
+
       - name: Command options for deploy
         id: deployOptions
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           result-encoding: string
           script: |
-            let options = "-x '${{ github.event.inputs.path_package_xml }}'"
-            if ( "this${{ github.event.inputs.path_package_xml_pre }}" !== "this" ) {
-              options += " --predestructivechanges='${{ github.event.inputs.path_package_xml_destructive_pre }}'"
-            }
-            if ( "this${{ github.event.inputs.path_package_xml_post }}" !== "this" ) {
-              options += " --postdestructivechanges='${{ github.event.inputs.path_package_xml_destructive_post }}'"
-            }
+            let options = ""
+            options += " -x '${{ github.event.inputs.options.path_package_xml }}'"
+            options += "${{ github.event.inputs.options.path_package_xml_pre   }}" ? " --predestructivechanges='${{  github.event.inputs.options.path_package_xml_destructive_pre  }}'" : ""
+            options += "${{ github.event.inputs.options.path_package_xml_prost }}" ? " --postdestructivechanges='${{ github.event.inputs.options.path_package_xml_destructive_post }}'" : ""
+            options += " ${{ github.event.inputs.options;otherOptions }}"
             return options
 
       - name: Deploy metadata to Salesforce (target org)
