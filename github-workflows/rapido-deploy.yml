@@ -55,8 +55,8 @@ jobs:
       - name: Get packageData
         id: packageData
         uses: actions/github-script@v7
-        result-encoding: string
         with:
+          result-encoding: string
           script: |
             console.log("context = ", context)
             console.log("data = ", JSON.parse(context.payload.inputs.data))
