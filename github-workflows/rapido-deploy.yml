@@ -57,7 +57,7 @@ jobs:
         with:
           script: |
             const data = JSON.parse(context.payload.inputs.data)
-            console.log("data", JSON.parse(data))
+            console.log("data", data)
             console.log("packageData", data.packageData)
             console.log("destructivePreData", data.destructivePreData)
             console.log("destructivePostData", data.destructivePostData)
