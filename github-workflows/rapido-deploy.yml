@@ -61,24 +61,26 @@ jobs:
             console.log("context = ", context)
             console.log("data = ", JSON.parse(context.payload.inputs.data))
             console.log("packageData = ", JSON.parse(context.payload.inputs.data).packageData)
-            return JSON.stringify(JSON.parse(context.payload.inputs.data).packageData)
+            const res = JSON.stringify(JSON.parse(context.payload.inputs.data).packageData)
+            console.log("res", res)
+            console.log("res2", JSON.stringify(fromJSON(github.event.inputs.data).packageData) }})
+            return
 
       - name: Generate package.xml
-        if: ${{ fromJSON(steps.packageData.outputs.result) }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ fromJSON(steps.packageData.outputs.result) }}
           path: "${{ github.event.inputs.path_package_xml }}"
 
       - name: Generate package.xml for destructive-changes-pre
-        if: ${{ fromJSON(steps.destructivePreData.outputs.result) }}
+        if: ${{ github.event.inputs.path_package_xml_destructive_pre }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ fromJSON(steps.destructivePreData.outputs.result) }}
           path: "${{ github.event.inputs.path_package_xml_destructive_pre }}"
 
       - name: Generate package.xml for destructive-changes-post
-        if: ${{ fromJSON(steps.destructivePostData.outputs.result) }}
+        if: ${{ github.event.inputs.path_package_xml_destructive_post }}
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
         with:
           contents: ${{ fromJSON(steps.destructivePostData.outputs.result) }}
