@@ -1,3 +1,466 @@
+# [1.0.0-alpha.221](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.220...v1.0.0-alpha.221) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([e5c7124](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/e5c712401f9eede8a373a1fa8c0615a106b32199))
+
+# [1.0.0-alpha.220](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.219...v1.0.0-alpha.220) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([6621806](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/66218065e8d5359d7fa4efa9e0fe8176335ec9ee))
+
+# [1.0.0-alpha.219](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.218...v1.0.0-alpha.219) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([11d6902](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/11d6902c3d0d7cdf4aa00b2ddf94c61d995c525f))
+
+# [1.0.0-alpha.218](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.217...v1.0.0-alpha.218) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([0c4ad4a](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/0c4ad4a1bb749453ce181265da394de19e21892f))
+
+# [1.0.0-alpha.217](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.216...v1.0.0-alpha.217) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([f032bac](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/f032bac4a83ed4be5cfc926ddce8b19e0e055c65))
+* fixed data and options parameters ([9200e51](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/9200e51d9fdd686a68b4287bf88700137c38ba9c))
+
+# [1.0.0-alpha.216](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.215...v1.0.0-alpha.216) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([d5eec4a](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/d5eec4a04b33ed5582ad373c39fd677ac7ea4206))
+
+# [1.0.0-alpha.215](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.214...v1.0.0-alpha.215) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([b72a8cc](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/b72a8cc82ebde5997050c5e79ffa86f791a399fe))
+
+# [1.0.0-alpha.214](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.213...v1.0.0-alpha.214) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([688bc3e](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/688bc3ec6d44a8c83d8f817ec9f0b7f899a295fc))
+
+# [1.0.0-alpha.213](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.212...v1.0.0-alpha.213) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([471c334](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/471c3348a4027a6ad32bf5edfb4ac6943c564836))
+
+# [1.0.0-alpha.212](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.211...v1.0.0-alpha.212) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([07e98e2](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/07e98e209da83c34d01b51d70cfc969d46cc9c7b))
+
+# [1.0.0-alpha.211](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.210...v1.0.0-alpha.211) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([57fa95d](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/57fa95da2c93caae6f20ba68ada4026ce95d7d0e))
+
+# [1.0.0-alpha.210](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.209...v1.0.0-alpha.210) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([8efd340](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/8efd340d04e63b2f6be9079e23e5c7d1513f248b))
+
+# [1.0.0-alpha.209](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.208...v1.0.0-alpha.209) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([6f3c6fb](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/6f3c6fb165181f3a49a6bfdaefe42d79cf2fc45c))
+
+# [1.0.0-alpha.208](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.207...v1.0.0-alpha.208) (2023-12-28)
+
+
+### Bug Fixes
+
+* fixed data and options parameters ([6fbadbc](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/6fbadbc0b8783d268a21a7a479554a2111d8635d))
+
+# [1.0.0-alpha.207](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.206...v1.0.0-alpha.207) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([cbaf382](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/cbaf382b44342bd9d29ec6ab172b17d67fc7f494))
+
+# [1.0.0-alpha.206](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.205...v1.0.0-alpha.206) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([1aed506](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/1aed5066414647a3613febdd03fb63064d922746))
+
+# [1.0.0-alpha.205](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.204...v1.0.0-alpha.205) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([ddf010f](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/ddf010f2305f5e9a37a5e4ec9030812d2f446cb7))
+
+# [1.0.0-alpha.204](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.203...v1.0.0-alpha.204) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([c77de9b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/c77de9b8d8e45f40d337b1155f21544306851418))
+
+# [1.0.0-alpha.203](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.202...v1.0.0-alpha.203) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([f0b0e1e](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/f0b0e1e6ecbe212c91f4a6cca5d42159ceda6971))
+
+# [1.0.0-alpha.202](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.201...v1.0.0-alpha.202) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([5fe1841](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/5fe1841d1b3384545b03582c2b6a888527f476da))
+
+# [1.0.0-alpha.201](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.200...v1.0.0-alpha.201) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([98bb7d7](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/98bb7d7cf6139df1556a9a53ebe924c4cf76d36c))
+
+# [1.0.0-alpha.200](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.199...v1.0.0-alpha.200) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([0c2284f](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/0c2284fe1710a240156c01f793bca86c5de49e67))
+
+# [1.0.0-alpha.199](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.198...v1.0.0-alpha.199) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([b82d665](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/b82d6658caeaac62a40ef0c60e375e9522d9af87))
+
+# [1.0.0-alpha.198](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.197...v1.0.0-alpha.198) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([25b868f](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/25b868fa06d789fe0bb5d00d6f5a27ed97fa7d20))
+
+# [1.0.0-alpha.197](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.196...v1.0.0-alpha.197) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([7335a21](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/7335a21c802eb702e80e75cb8551990bb8395af0))
+
+# [1.0.0-alpha.196](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.195...v1.0.0-alpha.196) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([4e4f595](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/4e4f595cd321a014dbd94b3dd0b8dadd44a9322a))
+
+# [1.0.0-alpha.195](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.194...v1.0.0-alpha.195) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([95c5972](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/95c5972fa4ca1c0f0db86401560f5adc4b1f06eb))
+
+# [1.0.0-alpha.194](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.193...v1.0.0-alpha.194) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([8b74c27](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/8b74c274ef1a7c6814c8569638177c1777058ba9))
+
+# [1.0.0-alpha.193](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.192...v1.0.0-alpha.193) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([38237ce](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/38237ce6854cd4d8d4c79b81b797cbbe52080912))
+
+# [1.0.0-alpha.192](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.191...v1.0.0-alpha.192) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([d9b38a6](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/d9b38a6701a1b3d270855a44edfb4e58c899263c))
+
+# [1.0.0-alpha.191](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.190...v1.0.0-alpha.191) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([618d190](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/618d19073ceb1a7e4734cdb31913691fffd9facf))
+
+# [1.0.0-alpha.190](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.189...v1.0.0-alpha.190) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([48ffcb2](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/48ffcb259f5334a57da939d1ecda133aef778808))
+
+# [1.0.0-alpha.189](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.188...v1.0.0-alpha.189) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([a07c149](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/a07c14952e1cee18db9e9d72ee28186dd7291d65))
+
+# [1.0.0-alpha.188](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.187...v1.0.0-alpha.188) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([49bc9ab](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/49bc9ab1c1c9880abe8d42c3ecd766d4112c285b))
+
+# [1.0.0-alpha.187](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.186...v1.0.0-alpha.187) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([1c7006b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/1c7006b6e41ce64e4acfa943b12c72530184081d))
+
+# [1.0.0-alpha.186](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.185...v1.0.0-alpha.186) (2023-12-21)
+
+
+### Bug Fixes
+
+* reverted back to single data input parameter ([5735d65](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/5735d658e01ea61395cf4c542d9763a92487df63))
+
+# [1.0.0-alpha.185](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.184...v1.0.0-alpha.185) (2023-12-21)
+
+
+### Bug Fixes
+
+* reverted back to single data input parameter ([82a07f4](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/82a07f4bcae7705458059a2625f6457040280707))
+
+# [1.0.0-alpha.184](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.183...v1.0.0-alpha.184) (2023-12-21)
+
+
+### Bug Fixes
+
+* reverted back to single data input parameter ([809153c](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/809153c2bc1d6db8f233153cbea591c426e22d98))
+
+# [1.0.0-alpha.183](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.182...v1.0.0-alpha.183) (2023-12-21)
+
+
+### Features
+
+* renamed rapido-changeset.yml to rapido-deploy.yml and split input data structure ([057ea50](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/057ea508194f9b3cf4fc7c4b22cbdb9e7c3f5df9))
+
+# [1.0.0-alpha.182](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.181...v1.0.0-alpha.182) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([fd3b4a0](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/fd3b4a08470ae362ad53646da6925305b49746ca))
+
+# [1.0.0-alpha.181](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.180...v1.0.0-alpha.181) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([3d6ed2b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/3d6ed2bfd9666fa25bde3777ea19f72747519ed6))
+
+# [1.0.0-alpha.180](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.179...v1.0.0-alpha.180) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([56b1be8](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/56b1be829f5a140414a6a35c17f288305a3b78f0))
+
+# [1.0.0-alpha.179](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.178...v1.0.0-alpha.179) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([b1e2434](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/b1e2434d4ec0b05b1a7d54caa8fd2cdde699cfbb))
+
+# [1.0.0-alpha.178](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.177...v1.0.0-alpha.178) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([13a057d](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/13a057db614b3caae73d385512f976f82d853e72))
+
+# [1.0.0-alpha.177](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.176...v1.0.0-alpha.177) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([4f3a034](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/4f3a0341b3747e6b45430917cb0cfa5e471295b5))
+
+# [1.0.0-alpha.176](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.175...v1.0.0-alpha.176) (2023-12-21)
+
+
+### Bug Fixes
+
+* debug behaviour ([c7d70ff](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/c7d70ff545b4f75c8bae706eef0748b5ed4ac18c))
+
+# [1.0.0-alpha.175](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.174...v1.0.0-alpha.175) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed output format in file ([0e0b980](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/0e0b98084b05b71674ae0fdf3e1f85e895a1e711))
+
+# [1.0.0-alpha.174](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.173...v1.0.0-alpha.174) (2023-12-07)
+
+
+### Bug Fixes
+
+* Output file contents correctly ([2fa5de1](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/2fa5de11e2fef1f8f60155fa9ada8151a0d0f569))
+
+# [1.0.0-alpha.173](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.172...v1.0.0-alpha.173) (2023-12-07)
+
+
+### Features
+
+* Commit changesets list to Github. ([77280a6](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/77280a624efb0907f716cb484ad201f666b7bb74))
+
+# [1.0.0-alpha.172](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.171...v1.0.0-alpha.172) (2023-12-07)
+
+
+### Features
+
+* Commit changesets list to Github. ([3620fff](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/3620fffb42ac63ff461de693b0cb02bed5b0f5bc))
+
+# [1.0.0-alpha.171](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.170...v1.0.0-alpha.171) (2023-12-07)
+
+
+### Bug Fixes
+
+* Debbuging ownership ([c4bf155](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/c4bf155d6b236ab596fd61fad966e4526c2cee51))
+* Debbuging ownership ([18006a2](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/18006a2734db85771b76c5544d9bfe912f346511))
+
+# [1.0.0-alpha.170](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.169...v1.0.0-alpha.170) (2023-12-07)
+
+
+### Bug Fixes
+
+* Debugging ([de12c5a](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/de12c5ae586bff31f4f7a6262003d97a2ffa9db9))
+
+# [1.0.0-alpha.169](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.168...v1.0.0-alpha.169) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed gti config ([6f71adf](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/6f71adf424c09ebca1e21ced04d28a64fb74af44))
+
+# [1.0.0-alpha.168](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.167...v1.0.0-alpha.168) (2023-12-07)
+
+
+### Bug Fixes
+
+* Debugging ([ea34435](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/ea344352684372a9dc6efcdeded28490c3d49ecd))
+
+# [1.0.0-alpha.167](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.166...v1.0.0-alpha.167) (2023-12-07)
+
+
+### Bug Fixes
+
+* Debugging ([e5efe41](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/e5efe4157e968a39bb87edd90e9d4a753930dacc))
+
+# [1.0.0-alpha.166](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.165...v1.0.0-alpha.166) (2023-12-07)
+
+
+### Bug Fixes
+
+* CHange git safe-directory ([4f183fc](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/4f183fcf051ea9452ec1c9dc1bc4d72c2eb4eb8a))
+
+# [1.0.0-alpha.165](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.164...v1.0.0-alpha.165) (2023-12-07)
+
+
+### Bug Fixes
+
+* Changed git add command ([7cb030a](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/7cb030a087ea9465354fa90a7bf317ba02018e7f))
+
+# [1.0.0-alpha.164](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.163...v1.0.0-alpha.164) (2023-12-07)
+
+
+### Bug Fixes
+
+* Added safe.directory for manifest ([cf42434](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/cf4243495f350e628f4d663c5d364865c019862c))
+
+# [1.0.0-alpha.163](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.162...v1.0.0-alpha.163) (2023-12-07)
+
+
+### Bug Fixes
+
+* Debug ([70cc4d9](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/70cc4d94023b2d6cce2e13ddcdef82d003fa2b2c))
+
+# [1.0.0-alpha.162](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.161...v1.0.0-alpha.162) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed add anc commit by doing these operations manually ([69c7758](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/69c77582d7202c53ef44431fb3593ca516ef10c7))
+
+# [1.0.0-alpha.161](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.160...v1.0.0-alpha.161) (2023-12-07)
+
+
+### Bug Fixes
+
+* Using a different Github action to commit ([bc0eb7b](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/bc0eb7b71d5f3d48a56fd9197d1e7a0e4bb883e9))
+
+# [1.0.0-alpha.160](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.159...v1.0.0-alpha.160) (2023-12-07)
+
+
+### Bug Fixes
+
+* Removed file pattern for Github commit. ([32e62f6](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/32e62f6aab81cdec5acafa34f215121227edd447))
+
+# [1.0.0-alpha.159](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.158...v1.0.0-alpha.159) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed filename. ([9b3999d](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/9b3999dd2019a45e6b738118feec05e95ca1c495))
+
+# [1.0.0-alpha.158](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.157...v1.0.0-alpha.158) (2023-12-07)
+
+
+### Bug Fixes
+
+* Fixed terminal used by the Github Action ([f753d22](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/f753d221a3000ed066c22692fac7190b8f3ee2ea))
+
+
+### Features
+
+* output the changesets list to a file ([be110e9](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/be110e9ec4497afb0c89db88b01743cd8e2171f9))
+
+# [1.0.0-alpha.157](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.156...v1.0.0-alpha.157) (2023-12-07)
+
+
+### Features
+
+* output the changesets list to a file ([00651d9](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/00651d914a11b441a4dcd8fa58e099bd84aff9cb))
+* output the changesets list to a file ([f6fd3b9](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/f6fd3b99fc0fba5587c3bc9a26b04a97d6a4ced0))
+
 # [1.0.0-alpha.156](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.155...v1.0.0-alpha.156) (2023-11-14)
 
 
