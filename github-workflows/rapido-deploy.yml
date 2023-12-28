@@ -57,14 +57,19 @@ jobs:
         uses: actions/github-script@v7
         with:
           result-encoding: string
-          script: |
-            console.log("context = ", context)
-            console.log("data = ", JSON.parse(context.payload.inputs.data))
-            console.log("packageData = ", JSON.parse(context.payload.inputs.data).packageData)
-            const res = JSON.stringify(JSON.parse(context.payload.inputs.data).packageData)
-            console.log("res", res)
-            console.log("res2", JSON.stringify(${{ fromJSON(github.event.inputs.data).packageData }})
-            return
+          script: return JSON.stringify(JSON.parse(context.payload.inputs.data).packageData)
+      - name: Get destructivePreData
+        id: destructivePreData
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: return JSON.stringify(JSON.parse(context.payload.inputs.data).destructivePreData)
+      - name: Get destructivePostData
+        id: destructivePostData
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: return JSON.stringify(JSON.parse(context.payload.inputs.data).destructivePostData)
 
       - name: Generate package.xml
         uses: RupertBarrow/actions/action-create-sfdx-package-xml@v3
