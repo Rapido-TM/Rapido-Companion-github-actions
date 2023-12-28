@@ -1,3 +1,10 @@
+# [1.0.0-alpha.222](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.221...v1.0.0-alpha.222) (2023-12-28)
+
+
+### Features
+
+* changed sfdx commands to sf commands ([2bc0eae](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/2bc0eaead20ffc2e9c0509288ca6884dd955a4f6))
+
 # [1.0.0-alpha.221](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.220...v1.0.0-alpha.221) (2023-12-28)
 
 
