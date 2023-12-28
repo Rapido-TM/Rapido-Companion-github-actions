@@ -58,8 +58,9 @@ jobs:
         with:
           result-encoding: string
           script: |
-            console.log("data = ", github.event.inputs.data)
-            console.log("packageData = ", github.event.inputs.data.packageData)
+            console.log("context = ", context)
+            console.log("data = ", context.event.inputs.data)
+            console.log("packageData = ", context.event.inputs.data.packageData)
 
             return github.event.inputs.data.packageData
 
