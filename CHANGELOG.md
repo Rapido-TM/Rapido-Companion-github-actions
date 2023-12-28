@@ -1,3 +1,10 @@
+# [1.0.0-alpha.203](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.202...v1.0.0-alpha.203) (2023-12-28)
+
+
+### Bug Fixes
+
+* debug behaviour ([f0b0e1e](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/f0b0e1e6ecbe212c91f4a6cca5d42159ceda6971))
+
 # [1.0.0-alpha.202](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.201...v1.0.0-alpha.202) (2023-12-28)
 
 
