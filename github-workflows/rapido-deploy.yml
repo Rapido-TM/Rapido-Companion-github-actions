@@ -177,7 +177,7 @@ jobs:
         with:
           salesforce_sfdx_auth_url: ${{ github.event.inputs.salesforce_sfdx_auth_url_source }}
           #command: "sfdx force:source:retrieve -x ${{ steps.path_package_xml.outputs.result }}"
-          command: "sf project retrieve start --manifest=${{ steps.path_package_xml.outputs.result }}"
+          command: "sf project retrieve start --ignore-conflicts --manifest=${{ steps.path_package_xml.outputs.result }}"
 
       - name: Command options for deploy
         id: deployOptions
@@ -189,7 +189,7 @@ jobs:
             options += " --manifest='${{ steps.path_package_xml.outputs.result }}'"
             options += '${{ steps.destructivePreData.outputs.result  }}' !== '' ? " --pre-destructive-changes='${{  steps.path_package_xml_destructive_pre.outputs.result  }}'" : ""
             options += '${{ steps.destructivePostData.outputs.result }}' !== '' ? " --post-destructive-changes='${{ steps.path_package_xml_destructive_post.outputs.result }}'" : ""
-            options += " ${{ github.event.inputs.options.otherOptions }}"
+            options += " ${{ github.event.inputs.options.otherOptions }} --ignore-conflicts"
             return options
 
       - name: Deploy metadata to Salesforce (target org)
