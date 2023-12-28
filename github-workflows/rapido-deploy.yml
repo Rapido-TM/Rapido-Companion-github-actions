@@ -163,7 +163,7 @@ jobs:
             options += " -x '${{ github.event.inputs.options.path_package_xml }}'"
             options += "${{ github.event.inputs.options.path_package_xml_pre   }}" ? " --predestructivechanges='${{  github.event.inputs.options.path_package_xml_destructive_pre  }}'" : ""
             options += "${{ github.event.inputs.options.path_package_xml_prost }}" ? " --postdestructivechanges='${{ github.event.inputs.options.path_package_xml_destructive_post }}'" : ""
-            options += " ${{ github.event.inputs.options;otherOptions }}"
+            options += " ${{ github.event.inputs.options.otherOptions }}"
             return options
 
       - name: Deploy metadata to Salesforce (target org)
