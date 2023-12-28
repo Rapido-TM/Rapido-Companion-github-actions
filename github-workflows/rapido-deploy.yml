@@ -43,7 +43,6 @@ on:
       options:
         description: "Options passed to the deploy command (JSON)"
         required: true
-        default: {}
 
       branch:
         description: "Branch on which to work"
