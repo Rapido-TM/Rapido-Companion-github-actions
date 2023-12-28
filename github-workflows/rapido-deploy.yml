@@ -61,7 +61,6 @@ jobs:
             console.log("context = ", context)
             console.log("data = ", JSON.parse(context.payload.inputs.data))
             console.log("packageData = ", JSON.parse(context.payload.inputs.data).packageData)
-
             return JSON.stringify(JSON.parse(context.payload.inputs.data).packageData)
 
       - name: Generate package.xml
