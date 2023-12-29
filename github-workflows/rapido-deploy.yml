@@ -200,6 +200,10 @@ jobs:
           #command: "sfdx force:source:deploy ${{ steps.deployOptions.outputs.result }}"
           command: "sf project deploy start --json ${{ steps.deployOptions.outputs.result }}"
 
+      - name: DEBUG
+        run: |
+          echo "result = ###${{ steps.deploy.outputs.result }}###"
+
       - name: Output command result to an annotation
         if: ${{ always() }}
         uses: dkhunt27/action-annotations@v1
