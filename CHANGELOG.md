@@ -1,3 +1,10 @@
+# [1.0.0-alpha.229](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.228...v1.0.0-alpha.229) (2023-12-29)
+
+
+### Bug Fixes
+
+* Collected command results from GHA ([3af20ab](https://github.com/Rapido-TM/rapido-companion-github-actions/commit/3af20aba63b1f60b1995138a3aa562b357f477c5))
+
 # [1.0.0-alpha.228](https://github.com/Rapido-TM/rapido-companion-github-actions/compare/v1.0.0-alpha.227...v1.0.0-alpha.228) (2023-12-29)
 
 
