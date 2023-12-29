@@ -201,6 +201,7 @@ jobs:
           command: "sf project deploy start --json ${{ steps.deployOptions.outputs.result }}"
 
       - name: DEBUG
+        if: ${{ always() }}
         run: |
           echo "result = ###${{ steps.deploy.outputs.result }}###"
 
